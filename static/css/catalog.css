@@ -1,0 +1,114 @@
+/* ====== Каталог аниме ====== */
+.catalog {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.catalog h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Фильтры */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.filters input,
+.filters select,
+.filters button {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.2s;
+}
+
+.filters input:focus,
+.filters select:focus {
+    border-color: #ff4da6;
+    box-shadow: 0 0 6px rgba(255, 77, 166, 0.3);
+}
+
+.filters button {
+    background: #ff4da6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filters button:hover {
+    background: #e03e92;
+}
+
+/* Сетка каталога */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.catalog-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.catalog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.catalog-item .poster img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.catalog-item h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.catalog-item .genres {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    background: #ff4da6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #e03e92;
+}
+
+/* Когда пусто */
+.empty {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 40px;
+}
+

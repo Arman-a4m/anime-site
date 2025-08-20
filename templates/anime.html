@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/anime.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="anime-page">
+    <div class="anime-info">
+        <div class="poster">
+            <img src="{{ anime.poster|e }}" alt="{{ anime.title|e }}">
+        </div>
+        <div class="details">
+            <h1>{{ anime.title|e }}</h1>
+            <p><b>Оригинальное название:</b> {{ anime.title_original|e }}</p>
+            <p><b>Описание:</b> {{ anime.description|e }}</p>
+            <p><b>Жанры:</b> {{ anime.genre|join(', ') }}</p>
+            <p><b>Год выпуска:</b> {{ anime.year }}</p>
+            <p><b>Статус:</b> {{ anime.status|e }}</p>
+            <p><b>Студия:</b> {{ anime.studio|e }}</p>
+            <p><b>Количество серий:</b> {{ anime.episodes }}</p>
+            <p><b>Длительность серии:</b> {{ anime.duration|e }}</p>
+            <p><b>Возрастной рейтинг:</b> {{ anime.age_rating|e }}</p>
+            <p><b>Персонажи:</b> {{ anime.characters|join(', ') }}</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>🎬 Трейлеры</h2>
+    <div class="trailers">
+        {% for ep in anime.trailers %}
+        <div class="trailer-card">
+            <p>Трейлер (эпизод {{ ep.ep }})</p>
+            <iframe src="{{ ep.url|e }}" frameborder="0" allowfullscreen
+                    referrerpolicy="no-referrer" loading="lazy"></iframe>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <h2>🔗 Похожие аниме</h2>
+    {% if recommendations %}
+        <div class="recommendations">
+            {% for a in recommendations %}
+            <div class="rec-item">
+                <img src="{{ a.poster|e }}" alt="{{ a.title|e }}">
+                <h3>{{ a.title|e }}</h3>
+                <p><b>Жанры:</b> {{ a.genre|join(', ') }}</p>
+                <a href="{{ url_for('anime_page', title=a.title) }}" class="btn">Подробнее</a>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>😔 Похожих аниме пока нет.</p>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+
+

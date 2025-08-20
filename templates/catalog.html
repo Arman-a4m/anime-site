@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/catalog.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="catalog">
+    <h1>📚 Каталог аниме</h1>
+
+    <!-- Форма фильтров -->
+    <form method="get" class="filters">
+        <input type="text" name="q" placeholder="🔍 Поиск аниме..." value="{{ request.args.get('q', '') }}">
+
+        <select name="genre">
+            <option value="">Все жанры</option>
+            {% for g in genres %}
+            <option value="{{ g }}" {% if request.args.get('genre') == g %}selected{% endif %}>{{ g }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="year">
+            <option value="">Все годы</option>
+            {% for y in years %}
+            <option value="{{ y }}" {% if request.args.get('year') == y %}selected{% endif %}>{{ y }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="status">
+            <option value="">Все статусы</option>
+            {% for s in statuses %}
+            <option value="{{ s }}" {% if request.args.get('status') == s %}selected{% endif %}>{{ s }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="studio">
+            <option value="">Все студии</option>
+            {% for st in studios %}
+            <option value="{{ st }}" {% if request.args.get('studio') == st %}selected{% endif %}>{{ st }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit" class="btn">Фильтровать</button>
+    </form>
+
+    <!-- Сетка аниме -->
+    {% if anime %}
+        <div class="catalog-grid">
+            {% for a in anime %}
+                <article class="catalog-item">
+                    <div class="poster">
+                        <img src="{{ a.poster|e }}" alt="{{ a.title|e }}">
+                    </div>
+                    <h2>{{ a.title|e }}</h2>
+                    <p class="genres"><b>Жанры:</b> {{ a.genre|join(', ') }}</p>
+                    <a href="{{ url_for('anime_page', title=a.title) }}" class="btn">Подробнее</a>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="empty">😔 Ничего не найдено.</p>
+    {% endif %}
+</section>
+{% endblock %}

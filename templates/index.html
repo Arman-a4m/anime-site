@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="recommendations container">
+    <h1>✨ Рекомендации недели</h1>
+
+    {% if anime_list %}
+        <div class="anime-grid">
+            {% for a in anime_list %}
+                <article class="anime-card" aria-label="{{ a.title|e }}">
+                    <!-- Постер -->
+                    <div class="poster">
+                        <img src="{{ a.poster|e }}" alt="Постер {{ a.title|e }}">
+                    </div>
+
+                    <div class="anime-info">
+                        <h2>{{ a.title|e }}</h2>
+
+                        <!-- Жанры -->
+                        <p class="genres"><b>Жанры:</b> {{ a.genre|join(', ') }}</p>
+
+                        <!-- Год -->
+                        {% if a.year %}
+                            <p class="year"><b>Год выхода:</b> {{ a.year }}</p>
+                        {% endif %}
+
+                        <!-- Кнопка -->
+                        <a href="{{ url_for('anime_page', title=a.title) }}" class="btn">Подробнее</a>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-recommendations">😔 Пока нет рекомендаций.</p>
+    {% endif %}
+</section>
+{% endblock %}
+
+
+
+
+
+

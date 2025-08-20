@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Naruto",
+    "title_original": "ナルト",
+    "genre": ["Экшен", "Приключения", "Сёнэн"],
+    "year": 2002,
+    "status": "Завершен",
+    "studio": "Studio Pierrot",
+    "episodes": 220,
+    "duration": "23 мин.",
+    "age_rating": "PG-13",
+    "description": "История юного ниндзя Наруто Удзумаки, который мечтает стать Хокаге и завоевать признание жителей своей деревни.",
+    "characters": ["Наруто Удзумаки", "Саске Учиха", "Сакура Харуно", "Какаши Хатакэ"],
+    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-dE6UHbFFg1A5.jpg",
+    "trailers": [
+      {"ep": 1, "url": "https://www.youtube.com/embed/qi2rByJed-E?si=ixo0vQkQmH-XjypE"}
+    ]
+  },
+  {
+    "title": "Hunter x Hunter",
+    "title_original": "ハンター×ハンター",
+    "genre": ["Экшен", "Приключения", "Фэнтези", "Сёнэн"],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 148,
+    "duration": "23 мин.",
+    "age_rating": "PG-13",
+    "description": "Мальчик по имени Гон Фрикс отправляется в путешествие, чтобы стать Хантером и найти своего отца, одного из лучших охотников в мире.",
+    "characters": ["Гон Фрикс", "Киллуа Золдик", "Курапика", "Леорио"],
+    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136-gj0bbCpDNrKG.jpg",
+    "trailers": [
+      {"ep": 1, "url": "https://www.youtube.com/embed/d6kBeJjTGnY?si=Iex-WNsBacDpTosi"}
+    ]
+  }
+]

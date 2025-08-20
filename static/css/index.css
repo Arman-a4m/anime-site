@@ -1,0 +1,84 @@
+/* Заголовок секции */
+.recommendations h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
+/* Сетка */
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* Карточка */
+.anime-card {
+    background: var(--card-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.anime-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+/* Постер */
+.poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Информация */
+.anime-info {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.anime-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.genres, .year {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 6px;
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    background: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.3s;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background: var(--accent-hover);
+}
+
+/* Сообщение если нет рекомендаций */
+.no-recommendations {
+    text-align: center;
+    color: #aaa;
+    font-size: 1rem;
+}
+
