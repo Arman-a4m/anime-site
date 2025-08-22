@@ -2,35 +2,2957 @@
   {
     "title": "Naruto",
     "title_original": "ナルト",
-    "genre": ["Экшен", "Приключения", "Сёнэн"],
+    "genre": [
+      "Экшен",
+      "Приключения",
+      "Сёнэн"
+    ],
     "year": 2002,
     "status": "Завершен",
     "studio": "Studio Pierrot",
     "episodes": 220,
-    "duration": "23 мин.",
+    "duration": "24 мин.",
     "age_rating": "PG-13",
-    "description": "История юного ниндзя Наруто Удзумаки, который мечтает стать Хокаге и завоевать признание жителей своей деревни.",
-    "characters": ["Наруто Удзумаки", "Саске Учиха", "Сакура Харуно", "Какаши Хатакэ"],
-    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20-dE6UHbFFg1A5.jpg",
-    "trailers": [
-      {"ep": 1, "url": "https://www.youtube.com/embed/qi2rByJed-E?si=ixo0vQkQmH-XjypE"}
-    ]
+    "description": "История ниндзя Наруто Удзумаки, мечтающего стать Хокаге.",
+    "characters": [
+      "Наруто Удзумаки",
+      "Саске Учиха",
+      "Сакура Харуно",
+      "Какаши Хатакэ"
+    ],
+    "poster": "",
+    "trailers": []
   },
   {
-    "title": "Hunter x Hunter",
-    "title_original": "ハンター×ハンター",
-    "genre": ["Экшен", "Приключения", "Фэнтези", "Сёнэн"],
+    "title": "Naruto: Shippuden",
+    "title_original": "ナルト 疾風伝",
+    "genre": [
+      "Экшен",
+      "Приключения",
+      "Сёнэн"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Studio Pierrot",
+    "episodes": 500,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение истории Наруто и его друзей.",
+    "characters": [
+      "Наруто Удзумаки",
+      "Саске Учиха",
+      "Сакура Харуно",
+      "Какаши Хатакэ"
+    ],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Bleach",
+    "title_original": "ブリーチ",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное",
+      "Сёнэн"
+    ],
+    "year": 2004,
+    "status": "Завершен",
+    "studio": "Studio Pierrot",
+    "episodes": 366,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Итиго Куросаки становится проводником душ и сражается с пустыми.",
+    "characters": [
+      "Итиго Куросаки",
+      "Рукия Кучики",
+      "Исида Урю",
+      "Орихиме Иноуэ"
+    ],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Yu Yu Hakusho",
+    "title_original": "幽☆遊☆白書",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное",
+      "Сёнэн"
+    ],
+    "year": 1992,
+    "status": "Завершен",
+    "studio": "Studio Pierrot",
+    "episodes": 112,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Подросток Юсуке умирает, но получает шанс вернуться как детектив загробного мира.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Rurouni Kenshin",
+    "title_original": "るろうに剣心 -明治剣客浪漫譚-",
+    "genre": [
+      "Экшен",
+      "Исторический",
+      "Драма"
+    ],
+    "year": 1996,
+    "status": "Завершен",
+    "studio": "Studio Gallop / DEEN",
+    "episodes": 94,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Странствующий мечник Бэттосай Кенсин клянётся больше не убивать и защищает слабых.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Inuyasha",
+    "title_original": "犬夜叉",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Приключения"
+    ],
+    "year": 2000,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 167,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Современная школьница Кагоме попадает в феодальную Японию и встречает полудемона Инуяшу.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Inuyasha: The Final Act",
+    "title_original": "犬夜叉 完結編",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Приключения"
+    ],
+    "year": 2009,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Завершение истории Инуяши и Кагоме.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Dragon Ball",
+    "title_original": "ドラゴンボール",
+    "genre": [
+      "Экшен",
+      "Приключения",
+      "Комедия"
+    ],
+    "year": 1986,
+    "status": "Завершен",
+    "studio": "Toei Animation",
+    "episodes": 153,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Приключения Сон Гоку в поисках Жемчужин Дракона.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Dragon Ball Z",
+    "title_original": "ドラゴンボールZ",
+    "genre": [
+      "Экшен",
+      "Приключения",
+      "Сёнэн"
+    ],
+    "year": 1989,
+    "status": "Завершен",
+    "studio": "Toei Animation",
+    "episodes": 291,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Гоку и Z-воители защищают Землю от мощных врагов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Dragon Ball GT",
+    "title_original": "ドラゴンボールGT",
+    "genre": [
+      "Экшен",
+      "Приключения",
+      "Сёнэн"
+    ],
+    "year": 1996,
+    "status": "Завершен",
+    "studio": "Toei Animation",
+    "episodes": 64,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Новые приключения Гоку в космосе и сражения с теневыми драконами.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fist of the North Star",
+    "title_original": "北斗の拳",
+    "genre": [
+      "Экшен",
+      "Постапокалипсис",
+      "Сёнэн"
+    ],
+    "year": 1984,
+    "status": "Завершен",
+    "studio": "Toei Animation",
+    "episodes": 109,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Кэнсиро использует боевое искусство Хокуто Синкэн в постапокалиптическом мире.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Slam Dunk",
+    "title_original": "スラムダンク",
+    "genre": [
+      "Спорт",
+      "Комедия",
+      "Драма"
+    ],
+    "year": 1993,
+    "status": "Завершен",
+    "studio": "Toei Animation",
+    "episodes": 101,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Ханамити Сакуранги попадает в баскетбольный клуб ради впечатления девушки.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Kuroko's Basketball",
+    "title_original": "黒子のバスケ",
+    "genre": [
+      "Спорт",
+      "Сёнэн"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "Production I.G",
+    "episodes": 75,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Команда «Сэйрин» с таинственным игроком Куроко стремится к вершине баскетбола.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Eyeshield 21",
+    "title_original": "アイシールド21",
+    "genre": [
+      "Спорт",
+      "Комедия",
+      "Сёнэн"
+    ],
+    "year": 2005,
+    "status": "Завершен",
+    "studio": "Gallop",
+    "episodes": 145,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Застенчивый Сена становится звездой американского футбола под маской Айшилда 21.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fullmetal Alchemist: Brotherhood",
+    "title_original": "鋼の錬金術師 FULLMETAL ALCHEMIST",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Драма",
+      "Сёнэн"
+    ],
+    "year": 2009,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 64,
+    "duration": "24 мин.",
+    "age_rating": "R-17",
+    "description": "Братья Элрики ищут философский камень, чтобы вернуть свои тела.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fullmetal Alchemist",
+    "title_original": "鋼の錬金術師",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Драма"
+    ],
+    "year": 2003,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 51,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Альтернативная адаптация истории братьев Элриков.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Gurren Lagann",
+    "title_original": "天元突破グレンラガン",
+    "genre": [
+      "Экшен",
+      "Меха",
+      "Приключения"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Gainax",
+    "episodes": 27,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Симон и Камина восстают против правителей подземного мира в гигантских мехах.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Kill la Kill",
+    "title_original": "キルラキル",
+    "genre": [
+      "Экшен",
+      "Комедия"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "Trigger",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "R-17",
+    "description": "Рюко Мато ищет убийцу отца и сражается в академии с униформами-паразитами.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Attack on Titan",
+    "title_original": "進撃の巨人",
+    "genre": [
+      "Экшен",
+      "Драма",
+      "Триллер"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "Wit Studio / MAPPA",
+    "episodes": 94,
+    "duration": "24 мин.",
+    "age_rating": "R-17",
+    "description": "Человечество сражается с гигантами, угрожающими их существованию.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Death Note",
+    "title_original": "デスノート",
+    "genre": [
+      "Триллер",
+      "Мистика",
+      "Детектив",
+      "Сёнэн"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 37,
+    "duration": "24 мин.",
+    "age_rating": "R-17",
+    "description": "Лайт Ягами находит тетрадь, позволяющую убивать по имени.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Code Geass: Lelouch of the Rebellion",
+    "title_original": "コードギアス 反逆のルルーシュ",
+    "genre": [
+      "Экшен",
+      "Меха",
+      "Драма"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Лелуш получает силу Гиас и начинает восстание.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Code Geass: Lelouch of the Rebellion R2",
+    "title_original": "コードギアス 反逆のルルーシュ R2",
+    "genre": [
+      "Экшен",
+      "Меха",
+      "Драма"
+    ],
+    "year": 2008,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение истории Лелуша и Черных Рыцарей.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Samurai Champloo",
+    "title_original": "サムライチャンプルー",
+    "genre": [
+      "Экшен",
+      "Приключения",
+      "Исторический"
+    ],
+    "year": 2004,
+    "status": "Завершен",
+    "studio": "Manglobe",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Фуу, Муген и Дзин путешествуют в поисках самурая с запахом подсолнухов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Cowboy Bebop",
+    "title_original": "カウボーイビバップ",
+    "genre": [
+      "Приключения",
+      "Научная фантастика",
+      "Неонуар"
+    ],
+    "year": 1998,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Охотники за головами бороздят космос в поисках добычи.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Trigun",
+    "title_original": "トライガン",
+    "genre": [
+      "Приключения",
+      "Научная фантастика",
+      "Экшен"
+    ],
+    "year": 1998,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Стрелок Вэш Летящий Пулей разыскивается за огромную награду.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Samurai X: Trust & Betrayal",
+    "title_original": "るろうに剣心 追憶編",
+    "genre": [
+      "Исторический",
+      "Драма",
+      "Экшен"
+    ],
+    "year": 1999,
+    "status": "Завершен",
+    "studio": "Studio Deen",
+    "episodes": 4,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Ова-история прошлого Кенсина.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Clannad",
+    "title_original": "CLANNAD",
+    "genre": [
+      "Драма",
+      "Романтика",
+      "Слайс оф Лайф"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 23,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Школьная драма о дружбе и взрослении.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Clannad: After Story",
+    "title_original": "CLANNAD ～AFTER STORY～",
+    "genre": [
+      "Драма",
+      "Романтика",
+      "Слайс оф Лайф"
+    ],
+    "year": 2008,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "История семейной жизни Томои и Нагисы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Toradora!",
+    "title_original": "とらドラ！",
+    "genre": [
+      "Романтика",
+      "Комедия",
+      "Слайс оф Лайф"
+    ],
+    "year": 2008,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Рюдзи и Тайга помогают друг другу в любви и сближаются.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Your Lie in April",
+    "title_original": "四月は君の嘘",
+    "genre": [
+      "Драма",
+      "Романтика",
+      "Музыка"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 22,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Пианист вновь находит вдохновение благодаря скрипачке Каори.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Anohana: The Flower We Saw That Day",
+    "title_original": "あの日見た花の名前を僕達はまだ知らない。",
+    "genre": [
+      "Драма",
+      "Слайс оф Лайф",
+      "Сверхъестественное"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Друзья детства сталкиваются с призраком прошлого.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Angel Beats!",
+    "title_original": "Angel Beats!",
+    "genre": [
+      "Драма",
+      "Комедия",
+      "Сверхъестественное"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "P.A. Works",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Школа в загробном мире и борьба против судьбы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Charlotte",
+    "title_original": "Charlotte",
+    "genre": [
+      "Драма",
+      "Сверхъестественное",
+      "Романтика"
+    ],
+    "year": 2015,
+    "status": "Завершен",
+    "studio": "P.A. Works",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Подростки с особыми способностями и цена их дара.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Violet Evergarden",
+    "title_original": "ヴァイオレット・エヴァーガーデン",
+    "genre": [
+      "Драма",
+      "Слайс оф Лайф"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Бывшая солдатка учится выражать чувства, пиша письма за других.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Golden Time",
+    "title_original": "ゴールデンタイム",
+    "genre": [
+      "Романтика",
+      "Комедия",
+      "Драма"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Студенческая жизнь и запутанные отношения Бана Рюты.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Hyouka",
+    "title_original": "氷菓",
+    "genre": [
+      "Мистика",
+      "Слайс оф Лайф"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 22,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Ореки Хаутаро раскрывает повседневные загадки клуба классики.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Barakamon",
+    "title_original": "ばらかもん",
+    "genre": [
+      "Комедия",
+      "Слайс оф Лайф"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Kinema Citrus",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Каллиграф переезжает на остров и обретает вдохновение.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Nichijou",
+    "title_original": "日常",
+    "genre": [
+      "Комедия",
+      "Сюрреализм",
+      "Слайс оф Лайф"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Абсурдные будни школьников и робота с профессоршей.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "K-On!",
+    "title_original": "けいおん！",
+    "genre": [
+      "Комедия",
+      "Музыка",
+      "Слайс оф Лайф"
+    ],
+    "year": 2009,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Школьная группа «Лайт Мьюзик Клаб» и её тёплые будни.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "K-On!!",
+    "title_original": "けいおん！！",
+    "genre": [
+      "Комедия",
+      "Музыка",
+      "Слайс оф Лайф"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение истории участников школьной группы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Spice and Wolf",
+    "title_original": "狼と香辛料",
+    "genre": [
+      "Приключения",
+      "Романтика",
+      "Фэнтези"
+    ],
+    "year": 2008,
+    "status": "Завершен",
+    "studio": "Imagin",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Купец Лоуренс и богиня Холо путешествуют по средневековому миру.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Spice and Wolf II",
+    "title_original": "狼と香辛料II",
+    "genre": [
+      "Приключения",
+      "Романтика",
+      "Фэнтези"
+    ],
+    "year": 2009,
+    "status": "Завершен",
+    "studio": "Brain's Base / Marvy Jack",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение странствий Лоуренса и Холо.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fruits Basket (2001)",
+    "title_original": "フルーツバスケット",
+    "genre": [
+      "Романтика",
+      "Драма",
+      "Сверхъестественное"
+    ],
+    "year": 2001,
+    "status": "Завершен",
+    "studio": "Studio Deen",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Тохру Хонда знакомится с семьёй загадочного проклятия.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fruits Basket (2019)",
+    "title_original": "フルーツバスケット",
+    "genre": [
+      "Романтика",
+      "Драма",
+      "Сверхъестественное"
+    ],
+    "year": 2019,
+    "status": "Завершен",
+    "studio": "TMS Entertainment",
+    "episodes": 63,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Полная новая адаптация истории Тохру, завершённая в 3 сезонах.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Ouran High School Host Club",
+    "title_original": "桜蘭高校ホスト部",
+    "genre": [
+      "Комедия",
+      "Романтика"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Хaruhi попадает в клуб хоcтов элитной школы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Honey and Clover",
+    "title_original": "ハチミツとクローバー",
+    "genre": [
+      "Драма",
+      "Романтика",
+      "Слайс оф Лайф"
+    ],
+    "year": 2005,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Студенты-приятели переживают дружбу и первую любовь.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Honey and Clover II",
+    "title_original": "ハチミツとクローバーII",
+    "genre": [
+      "Драма",
+      "Романтика",
+      "Слайс оф Лайф"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение студенческой истории о взрослении.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Nodame Cantabile",
+    "title_original": "のだめカンタービレ",
+    "genre": [
+      "Музыка",
+      "Романтика",
+      "Комедия"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 23,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Пианист Тиаки и талантливая, но хаотичная Нодаме.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Nodame Cantabile: Paris Chapter",
+    "title_original": "のだめカンタービレ 巴里編",
+    "genre": [
+      "Музыка",
+      "Романтика",
+      "Комедия"
+    ],
+    "year": 2008,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Герои продолжают обучение музыке в Париже.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Nodame Cantabile: Finale",
+    "title_original": "のだめカンタービレ フィナーレ",
+    "genre": [
+      "Музыка",
+      "Романтика",
+      "Комедия"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Финал истории Нодаме и Тиаки.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Steins;Gate",
+    "title_original": "STEINS;GATE",
+    "genre": [
+      "Фантастика",
+      "Триллер",
+      "Драма"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "White Fox",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Самопровозглашённый безумный учёный случайно открывает путь к прошлому.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Steins;Gate 0",
+    "title_original": "STEINS;GATE 0",
+    "genre": [
+      "Фантастика",
+      "Драма"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "White Fox",
+    "episodes": 23,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Ответвление, где Окабе живёт с последствиями потерь.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Erased",
+    "title_original": "僕だけがいない街",
+    "genre": [
+      "Триллер",
+      "Мистика",
+      "Драма"
+    ],
+    "year": 2016,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Способность возвращаться в прошлое помогает предотвратить трагедии.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Psycho-Pass",
+    "title_original": "PSYCHO-PASS サイコパス",
+    "genre": [
+      "Фантастика",
+      "Триллер"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "Production I.G",
+    "episodes": 22,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Мир, где уровень преступности предсказывается системой Сибилла.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Paranoia Agent",
+    "title_original": "妄想代理人",
+    "genre": [
+      "Психологический",
+      "Мистика"
+    ],
+    "year": 2004,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Город наводняет слух о таинственном нападающем с бейсбольной битой.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Serial Experiments Lain",
+    "title_original": "シリアルエクスペリメンツ レイン",
+    "genre": [
+      "Психологический",
+      "Фантастика"
+    ],
+    "year": 1998,
+    "status": "Завершен",
+    "studio": "Triangle Staff",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Лэйн погружается в сеть и исчезающие границы реальности.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Ergo Proxy",
+    "title_original": "エルゴプラクシー",
+    "genre": [
+      "Фантастика",
+      "Мистика",
+      "Постапокалипсис"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Manglobe",
+    "episodes": 23,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Рил Мэйер расследует убийства в городе куполе.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Texhnolyze",
+    "title_original": "テクノライズ",
+    "genre": [
+      "Психологический",
+      "Фантастика",
+      "Драма"
+    ],
+    "year": 2003,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 22,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Мрачный киберпанк о выживании в подземном городе Лукс.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Monster",
+    "title_original": "モンスター",
+    "genre": [
+      "Триллер",
+      "Детектив",
+      "Драма"
+    ],
+    "year": 2004,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 74,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Нейрохирург Тэнма преследует серийного убийцу, которого когда-то спас.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Baccano!",
+    "title_original": "バッカーノ！",
+    "genre": [
+      "Экшен",
+      "Мистика"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Brain's Base",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Переплетённые истории гангстеров, бессмертных и алхимиков в 30-х.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Durarara!!",
+    "title_original": "デュラララ!!",
+    "genre": [
+      "Мистика",
+      "Экшен",
+      "Комедия"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "Brain's Base",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Икэбукуро полон городских легенд, байкера без головы и интриг.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Durarara!!x2",
+    "title_original": "デュラララ!!×2",
+    "genre": [
+      "Мистика",
+      "Экшен",
+      "Комедия"
+    ],
+    "year": 2015,
+    "status": "Завершен",
+    "studio": "Shuka",
+    "episodes": 36,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение историй Икэбукуро в трёх частях.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "The Tatami Galaxy",
+    "title_original": "四畳半神話大系",
+    "genre": [
+      "Комедия",
+      "Психологический"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Студент бесконечно переигрывает свои варианты клубов и жизней.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Ping Pong the Animation",
+    "title_original": "ピンポン THE ANIMATION",
+    "genre": [
+      "Спорт",
+      "Драма"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Tatsunoko Production",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Два друга соревнуются в настольном теннисе и взрослении.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Parasyte -the maxim-",
+    "title_original": "寄生獣 セイの格率",
+    "genre": [
+      "Ужасы",
+      "Фантастика",
+      "Экшен"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Инопланетный паразит поселяется в руке школьника.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Higurashi: When They Cry",
+    "title_original": "ひぐらしのなく頃に",
+    "genre": [
+      "Ужасы",
+      "Мистика"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Studio Deen",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Тихая деревня скрывает цикличные трагедии и тайны.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Higurashi: When They Cry Kai",
+    "title_original": "ひぐらしのなく頃に解",
+    "genre": [
+      "Ужасы",
+      "Мистика"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Studio Deen",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Ответы на загадки Хинамидзавы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "When They Cry - Higurashi Rei",
+    "title_original": "ひぐらしのなく頃に礼",
+    "genre": [
+      "Мистика",
+      "Ужасы"
+    ],
+    "year": 2009,
+    "status": "Завершен",
+    "studio": "Studio Deen",
+    "episodes": 5,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "OVA-истории в мире Хинамидзавы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Umineko no Naku Koro ni",
+    "title_original": "うみねこのなく頃に",
+    "genre": [
+      "Мистика",
+      "Триллер"
+    ],
+    "year": 2009,
+    "status": "Завершен",
+    "studio": "Studio Deen",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Усадьба Роккендзима, замкнутый остров и череда убийств.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Another",
+    "title_original": "アナザー",
+    "genre": [
+      "Ужасы",
+      "Мистика"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "P.A. Works",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Класс, поражённый проклятием, и новая ученица Мисаки Мэй.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Made in Abyss (TV 2017)",
+    "title_original": "メイドインアビス",
+    "genre": [
+      "Приключения",
+      "Фэнтези",
+      "Драма"
+    ],
+    "year": 2017,
+    "status": "Завершен",
+    "studio": "Kinema Citrus",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "R-17",
+    "description": "Девочка Рико и робот Рэг погружаются в опасный Бездну.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Magi: The Labyrinth of Magic",
+    "title_original": "マギ The labyrinth of magic",
+    "genre": [
+      "Приключения",
+      "Фэнтези",
+      "Сёнэн"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Аладдин, Алибаба и Моржана исследуют подземелья джиных.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Magi: The Kingdom of Magic",
+    "title_original": "マギ The kingdom of magic",
+    "genre": [
+      "Приключения",
+      "Фэнтези",
+      "Сёнэн"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Путешествия героев продолжаются в новых землях.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "No Game No Life",
+    "title_original": "ノーゲーム・ノーライフ",
+    "genre": [
+      "Фэнтези",
+      "Комедия",
+      "Игры"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Гении-геймеры попадают в мир, где всё решают игры.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "The Rising of the Shield Hero (S1)",
+    "title_original": "盾の勇者の成り上がり",
+    "genre": [
+      "Фэнтези",
+      "Приключения"
+    ],
+    "year": 2019,
+    "status": "Завершен",
+    "studio": "Kinema Citrus",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Наофуми призывается как Герой Щита в иной мир.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "The Ancient Magus' Bride (S1)",
+    "title_original": "魔法使いの嫁",
+    "genre": [
+      "Фэнтези",
+      "Романтика"
+    ],
+    "year": 2017,
+    "status": "Завершен",
+    "studio": "Wit Studio",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Чисэ продают магу Элиасу — начинается новая жизнь.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Black Clover (Seasons 1-4)",
+    "title_original": "ブラッククローバー",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Сёнэн"
+    ],
+    "year": 2017,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 170,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Аста без магии стремится стать Королём магов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fairy Tail",
+    "title_original": "フェアリーテイル",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Приключения"
+    ],
+    "year": 2009,
+    "status": "Завершен",
+    "studio": "A-1 Pictures / Bridge / CloverWorks",
+    "episodes": 328,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Гильдия магов «Хвост Феи» и их приключения.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Soul Eater",
+    "title_original": "ソウルイーター",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное",
+      "Сёнэн"
+    ],
+    "year": 2008,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 51,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Ученики Академии Шибусена охотятся за душами злодеев.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "D.Gray-man",
+    "title_original": "ディー・グレイマン",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "TMS Entertainment",
+    "episodes": 103,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Экзорцисты борются с Миллениумным Графом.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fate/stay night (2006)",
+    "title_original": "Fate/stay night",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Романтика"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Studio Deen",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Битва магов и слуг за Святой Грааль.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fate/Zero",
+    "title_original": "Fate/Zero",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Драма"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "ufotable",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Предыстория Пятой войны за Грааль.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Fate/stay night: Unlimited Blade Works",
+    "title_original": "Fate/stay night [Unlimited Blade Works]",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Романтика"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "ufotable",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Маршрут UBW в адаптации от ufotable.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Violet Evergarden: Extra Episode",
+    "title_original": "ヴァイオレット・エヴァーガーデン Extra Episode",
+    "genre": [
+      "Драма"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 1,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Дополнительная история о работе Вайолет.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Tokyo Ghoul",
+    "title_original": "東京喰種トーキョーグール",
+    "genre": [
+      "Ужасы",
+      "Сверхъестественное",
+      "Драма"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Студент Канэки становится полугулем после операции.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Tokyo Ghoul √A",
+    "title_original": "東京喰種√A",
+    "genre": [
+      "Ужасы",
+      "Сверхъестественное",
+      "Драма"
+    ],
+    "year": 2015,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение конфликта гулей и CCG.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Tokyo Ghoul:re",
+    "title_original": "東京喰種トーキョーグール：re",
+    "genre": [
+      "Ужасы",
+      "Сверхъестественное",
+      "Драма"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Хайдэ / Сасаки Хайсэ и отряд Квинксов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Devilman Crybaby",
+    "title_original": "DEVILMAN crybaby",
+    "genre": [
+      "Ужасы",
+      "Экшен",
+      "Психологический"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "Science SARU",
+    "episodes": 10,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Акира Фудо становится Девилменом, чтобы спасти человечество.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Hellsing",
+    "title_original": "HELLSING",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2001,
+    "status": "Завершен",
+    "studio": "Gonzo",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Организация «Хеллсинг» и вампир Алукард.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Hellsing Ultimate",
+    "title_original": "HELLSING ULTIMATE",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Satelight / Madhouse / Graphinica",
+    "episodes": 10,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "OVA-адаптация ближе к манге о войне с вампирами.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Elfen Lied",
+    "title_original": "エルフェンリート",
+    "genre": [
+      "Ужасы",
+      "Драма",
+      "Сверхъестественное"
+    ],
+    "year": 2004,
+    "status": "Завершен",
+    "studio": "Arms",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "R-17",
+    "description": "Диклониусы и кровавая история Люси.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Akame ga Kill!",
+    "title_original": "アカメが斬る！",
+    "genre": [
+      "Экшен",
+      "Фэнтези",
+      "Драма"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "White Fox",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Борцы с тиранией из отряда «Найт Рейд».",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Danganronpa: The Animation",
+    "title_original": "ダンガンロンパ 希望の学園と絶望の高校生 The Animation",
+    "genre": [
+      "Детектив",
+      "Триллер"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "Lerche",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Школьники вынуждены играть в смертельную игру Монокумы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Black Bullet",
+    "title_original": "ブラック・ブレット",
+    "genre": [
+      "Экшен",
+      "Фантастика"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Kinema Citrus",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Человечество борется с паразитами Гастреа.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "School Rumble",
+    "title_original": "スクールランブル",
+    "genre": [
+      "Комедия",
+      "Романтика",
+      "Школа"
+    ],
+    "year": 2004,
+    "status": "Завершен",
+    "studio": "Studio Comet",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Комичные недопонимания Харимы, Тэнмы и друзей.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "School Rumble: 2nd Semester",
+    "title_original": "スクールランブル二学期",
+    "genre": [
+      "Комедия",
+      "Романтика",
+      "Школа"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Studio Comet",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение школьных комедий.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "The Melancholy of Haruhi Suzumiya",
+    "title_original": "涼宮ハルヒの憂鬱",
+    "genre": [
+      "Комедия",
+      "Сверхъестественное",
+      "Школа"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 28,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Клуб SOS и необычная Харухи.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Lucky Star",
+    "title_original": "らき☆すた",
+    "genre": [
+      "Комедия",
+      "Слайс оф Лайф"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Kyoto Animation",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Повседневность геймерши Конаты и её подруг.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Great Teacher Onizuka",
+    "title_original": "グレート・ティーチャー・オニヅカ",
+    "genre": [
+      "Комедия",
+      "Драма",
+      "Школа"
+    ],
+    "year": 1999,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 43,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Бывший байкер становится необычным школьным учителем.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Assassination Classroom",
+    "title_original": "暗殺教室",
+    "genre": [
+      "Комедия",
+      "Экшен",
+      "Школа"
+    ],
+    "year": 2015,
+    "status": "Завершен",
+    "studio": "Lerche",
+    "episodes": 47,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Класс 3-E должен убить своего сверхбыстрого учителя.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Kaguya-sama: Love is War (S1–S3)",
+    "title_original": "かぐや様は告らせたい",
+    "genre": [
+      "Комедия",
+      "Романтика"
+    ],
+    "year": 2019,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 37,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Битва гордости двух гениев за признание в любви.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Monthly Girls' Nozaki-kun",
+    "title_original": "月刊少女野崎くん",
+    "genre": [
+      "Комедия",
+      "Романтика"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Doga Kobo",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Старшеклассница узнаёт, что её возлюбленный — мангака-сёдзё.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Ore Monogatari!!",
+    "title_original": "俺物語!!",
+    "genre": [
+      "Комедия",
+      "Романтика"
+    ],
+    "year": 2015,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Добряк Такао и хрупкая Ринко строят искренние отношения.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Wotakoi: Love is Hard for Otaku",
+    "title_original": "ヲタクに恋は難しい",
+    "genre": [
+      "Комедия",
+      "Романтика"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Офисный ромком про гиков и геймеров.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Vinland Saga (Season 1)",
+    "title_original": "ヴィンランド・サガ",
+    "genre": [
+      "Исторический",
+      "Экшен",
+      "Драма"
+    ],
+    "year": 2019,
+    "status": "Завершен",
+    "studio": "Wit Studio",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Юный Торфин ищет путь среди войн викингов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Golden Kamuy (S1)",
+    "title_original": "ゴールデンカムイ",
+    "genre": [
+      "Исторический",
+      "Приключения"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "Geno Studio",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Сугимото и Асирпа ищут золото айнов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Kingdom (S1)",
+    "title_original": "キングダム",
+    "genre": [
+      "Исторический",
+      "Экшен"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 38,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Путь сироты Сина к званию великого генерала.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Arslan Senki (The Heroic Legend of Arslan)",
+    "title_original": "アルスラーン戦記",
+    "genre": [
+      "Исторический",
+      "Приключения"
+    ],
+    "year": 2015,
+    "status": "Завершен",
+    "studio": "Liden Films",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Принц Арслан борется за своё королевство.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Neon Genesis Evangelion",
+    "title_original": "新世紀エヴァンゲリオン",
+    "genre": [
+      "Меха",
+      "Психологический",
+      "Драма"
+    ],
+    "year": 1995,
+    "status": "Завершен",
+    "studio": "Gainax",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "R-17",
+    "description": "Пилоты Евангелионов против Ангелов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Aldnoah.Zero",
+    "title_original": "アルドノア・ゼロ",
+    "genre": [
+      "Меха",
+      "Научная фантастика"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "A-1 Pictures / TROYCA",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Земля против Марса в войне мехов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Eureka Seven",
+    "title_original": "交響詩篇エウレカセブン",
+    "genre": [
+      "Меха",
+      "Приключения",
+      "Романтика"
+    ],
+    "year": 2005,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 50,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Рентон и Эврика в небе с реф-бордингом и мехами.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Mobile Suit Gundam (1979)",
+    "title_original": "機動戦士ガンダム",
+    "genre": [
+      "Меха",
+      "Военный"
+    ],
+    "year": 1979,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 43,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Начало вселенной UC и история Амуро Рэя.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Gundam 00",
+    "title_original": "機動戦士ガンダム00",
+    "genre": [
+      "Меха",
+      "Научная фантастика"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 50,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Организация Celestial Being вмешивается в войны.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Code: Breaker",
+    "title_original": "コード:ブレイカー",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "Kinema Citrus",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Юный «код:брейкер» карает зло по-своему.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Yuri!!! on Ice",
+    "title_original": "ユーリ!!! on ICE",
+    "genre": [
+      "Спорт",
+      "Романтика"
+    ],
+    "year": 2016,
+    "status": "Завершен",
+    "studio": "MAPPA",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Фигурист Юрий возвращается на лёд с наставником Виктором.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Chihayafuru (S1)",
+    "title_original": "ちはやふる",
+    "genre": [
+      "Спорт",
+      "Драма"
+    ],
     "year": 2011,
     "status": "Завершен",
     "studio": "Madhouse",
-    "episodes": 148,
-    "duration": "23 мин.",
+    "episodes": 25,
+    "duration": "24 мин.",
     "age_rating": "PG-13",
-    "description": "Мальчик по имени Гон Фрикс отправляется в путешествие, чтобы стать Хантером и найти своего отца, одного из лучших охотников в мире.",
-    "characters": ["Гон Фрикс", "Киллуа Золдик", "Курапика", "Леорио"],
-    "poster": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx136-gj0bbCpDNrKG.jpg",
-    "trailers": [
-      {"ep": 1, "url": "https://www.youtube.com/embed/d6kBeJjTGnY?si=Iex-WNsBacDpTosi"}
-    ]
+    "description": "Клуб каруты и мечта Тихайи.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Initial D First Stage",
+    "title_original": "頭文字D First Stage",
+    "genre": [
+      "Спорт",
+      "Гонки"
+    ],
+    "year": 1998,
+    "status": "Завершен",
+    "studio": "Gallop / Studio Comet",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Такуми раскрывает талант уличного гонщика на перевале Акаги.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Yowamushi Pedal (S1)",
+    "title_original": "弱虫ペダル",
+    "genre": [
+      "Спорт",
+      "Комедия"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "TMS Entertainment",
+    "episodes": 38,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Анимешник Онода попадает в велоклуб.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Detective Conan: The Culprit Hanzawa",
+    "title_original": "名探偵コナン 犯人の犯沢さん",
+    "genre": [
+      "Комедия",
+      "Детектив"
+    ],
+    "year": 2022,
+    "status": "Завершен",
+    "studio": "TMS Entertainment",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Комедийный спин-офф о «силуэте преступника».",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Gosick",
+    "title_original": "GOSICK -ゴシック-",
+    "genre": [
+      "Детектив",
+      "Романтика"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Гениальная Викторика раскрывает тайны вместе с японским студентом.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Terror in Resonance",
+    "title_original": "残響のテロル",
+    "genre": [
+      "Триллер",
+      "Драма"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "MAPPA",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Двое подростков-террористов оставляют загадки Токио.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Serial Experiments Lain: Layer 0 (Special)",
+    "title_original": "ナビゲーション",
+    "genre": [
+      "Документальный",
+      "Спецвыпуск"
+    ],
+    "year": 1998,
+    "status": "Завершен",
+    "studio": "Triangle Staff",
+    "episodes": 1,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Навигационный специальный выпуск к сериалу Лэйн.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "FLCL",
+    "title_original": "フリクリ",
+    "genre": [
+      "Комедия",
+      "Фантастика"
+    ],
+    "year": 2000,
+    "status": "Завершен",
+    "studio": "Gainax / Production I.G",
+    "episodes": 6,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Сюрреалистичный приход инопланетянки Харухары на велосипедe Vespa.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Wolf's Rain",
+    "title_original": "ウルフズレイン",
+    "genre": [
+      "Фэнтези",
+      "Драма",
+      "Постапокалипсис"
+    ],
+    "year": 2003,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Волки в человеческом облике ищут Рай.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Planetes",
+    "title_original": "プラネテス",
+    "genre": [
+      "Фантастика",
+      "Драма"
+    ],
+    "year": 2003,
+    "status": "Завершен",
+    "studio": "Sunrise",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Команда космических мусорщиков в недалёком будущем.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Kino's Journey (2003)",
+    "title_original": "キノの旅 -the Beautiful World-",
+    "genre": [
+      "Приключения",
+      "Философия"
+    ],
+    "year": 2003,
+    "status": "Завершен",
+    "studio": "A.C.G.T",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Кино и говорящий мотоцикл исследуют разные страны.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Mushishi",
+    "title_original": "蟲師",
+    "genre": [
+      "Сверхъестественное",
+      "Слайс оф Лайф"
+    ],
+    "year": 2005,
+    "status": "Завершен",
+    "studio": "Artland",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Гинко исследует загадочных существ — муси.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Mushishi: The Next Passage",
+    "title_original": "蟲師 続章",
+    "genre": [
+      "Сверхъестественное",
+      "Слайс оф Лайф"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Artland",
+    "episodes": 20,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Новые истории путника Гинко.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Natsume's Book of Friends (S1)",
+    "title_original": "夏目友人帳",
+    "genre": [
+      "Сверхъестественное",
+      "Слайс оф Лайф"
+    ],
+    "year": 2008,
+    "status": "Завершен",
+    "studio": "Brain's Base",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Натсумэ видит духов и возвращает их имена.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Black Lagoon",
+    "title_original": "ブラック・ラグーン",
+    "genre": [
+      "Экшен",
+      "Криминал"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Команда «Лагуны» наёмников в Юго-Восточной Азии.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Black Lagoon: Roberta's Blood Trail",
+    "title_original": "ブラック・ラグーン Roberta's Blood Trail",
+    "genre": [
+      "Экшен",
+      "Криминал"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 5,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Кровавая охота Роборты.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Banana Fish",
+    "title_original": "BANANA FISH",
+    "genre": [
+      "Криминал",
+      "Драма",
+      "Экшен"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "MAPPA",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Преступный Нью-Йорк и история Эша и Эйдзи.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "91 Days",
+    "title_original": "91Days",
+    "genre": [
+      "Криминал",
+      "Драма"
+    ],
+    "year": 2016,
+    "status": "Завершен",
+    "studio": "Shuka",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Месть во времена сухого закона.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Bungo Stray Dogs (S1)",
+    "title_original": "文豪ストレイドッグス",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2016,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Детективное агентство особых способностей.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Gintama",
+    "title_original": "銀魂",
+    "genre": [
+      "Комедия",
+      "Экшен",
+      "Пародия"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Sunrise / BN Pictures",
+    "episodes": 367,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Сереброволосый самурай Гинтоки и его друзья в альтернативном Эдо.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Noragami",
+    "title_original": "ノラガミ",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Бог-неудачник Ято берётся за мелкие заказы.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Noragami Aragoto",
+    "title_original": "ノラガミ ARAGOTO",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2015,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение истории Ято и Хиёри.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Little Witch Academia (TV)",
+    "title_original": "リトルウィッチアカデミア",
+    "genre": [
+      "Фэнтези",
+      "Комедия"
+    ],
+    "year": 2017,
+    "status": "Завершен",
+    "studio": "Trigger",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Атсуко Кагари мечтает стать великой ведьмой.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "The Devil is a Part-Timer!",
+    "title_original": "はたらく魔王さま！",
+    "genre": [
+      "Комедия",
+      "Фэнтези"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "White Fox",
+    "episodes": 13,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Повелитель тьмы работает в фастфуде в Токио.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Bakuman.",
+    "title_original": "バクマン。",
+    "genre": [
+      "Драма",
+      "Комедия"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 75,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Двое школьников становятся мангаками.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Bakuman. 2nd Season",
+    "title_original": "バクマン。2",
+    "genre": [
+      "Драма",
+      "Комедия"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Продолжение пути мангак.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Bakuman. 3rd Season",
+    "title_original": "バクマン。3",
+    "genre": [
+      "Драма",
+      "Комедия"
+    ],
+    "year": 2012,
+    "status": "Завершен",
+    "studio": "J.C.STAFF",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Финал истории о манге и мечте.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Toriko",
+    "title_original": "トリコ",
+    "genre": [
+      "Экшен",
+      "Приключения",
+      "Сёнэн"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "Toei Animation",
+    "episodes": 147,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Охотник за ингредиентами в мире гурманов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Beelzebub",
+    "title_original": "べるぜバブ",
+    "genre": [
+      "Комедия",
+      "Экшен",
+      "Сёнэн"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "Pierrot Plus",
+    "episodes": 60,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Хулиган Ога воспитывает младенца-демона.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Blue Exorcist",
+    "title_original": "青の祓魔師",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2011,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 25,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Рин Окумура — сын Сатаны, который становится экзорцистом.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Blue Exorcist: Kyoto Saga",
+    "title_original": "青の祓魔師 京都不浄王編",
+    "genre": [
+      "Экшен",
+      "Сверхъестественное"
+    ],
+    "year": 2017,
+    "status": "Завершен",
+    "studio": "A-1 Pictures",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Арка Киото — продолжение борьбы экзорцистов.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Soul Eater NOT!",
+    "title_original": "ソウルイーターノット！",
+    "genre": [
+      "Комедия",
+      "Сверхъестественное"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "Bones",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Спин-офф о ученицах класса NOT.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "FLCL Progressive",
+    "title_original": "フリクリ プログレ",
+    "genre": [
+      "Комедия",
+      "Фантастика"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "Production I.G / Bones",
+    "episodes": 6,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Новая история во вселенной FLCL.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "FLCL Alternative",
+    "title_original": "フリクリ オルタナ",
+    "genre": [
+      "Комедия",
+      "Фантастика"
+    ],
+    "year": 2018,
+    "status": "Завершен",
+    "studio": "Production I.G / Bones",
+    "episodes": 6,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Ещё одна новая история FLCL.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Shiki",
+    "title_original": "屍鬼",
+    "genre": [
+      "Ужасы",
+      "Мистика"
+    ],
+    "year": 2010,
+    "status": "Завершен",
+    "studio": "Daume",
+    "episodes": 22,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Деревню охватывает эпидемия вампиризма.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Zankyou no Terror (Terror in Resonance)",
+    "title_original": "残響のテロル",
+    "genre": [
+      "Триллер",
+      "Драма"
+    ],
+    "year": 2014,
+    "status": "Завершен",
+    "studio": "MAPPA",
+    "episodes": 11,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Дуэт Sphinx устраивает загадочные теракты в Токио.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Ergo Proxy (Special Ending)",
+    "title_original": "エルゴプラクシー Special",
+    "genre": [
+      "Фантастика"
+    ],
+    "year": 2006,
+    "status": "Завершен",
+    "studio": "Manglobe",
+    "episodes": 1,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Спецвыпуск к сериалу.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Gankutsuou: The Count of Monte Cristo",
+    "title_original": "巌窟王",
+    "genre": [
+      "Драма",
+      "Фантастика"
+    ],
+    "year": 2004,
+    "status": "Завершен",
+    "studio": "Gonzo",
+    "episodes": 24,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Фuturистическая адаптация графа Монте-Кристо.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Claymore",
+    "title_original": "クレイモア",
+    "genre": [
+      "Экшен",
+      "Фэнтези"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Женщины-воины с силой демонов сражаются с ёмами.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Seirei no Moribito",
+    "title_original": "精霊の守り人",
+    "genre": [
+      "Фэнтези",
+      "Приключения"
+    ],
+    "year": 2007,
+    "status": "Завершен",
+    "studio": "Production I.G",
+    "episodes": 26,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Наёмница Балса защищает принца с таинственным духом.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Twelve Kingdoms",
+    "title_original": "十二国記",
+    "genre": [
+      "Фэнтези",
+      "Приключения"
+    ],
+    "year": 2002,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 45,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Школьница попадает в иной мир двенадцати королевств.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "The Twelve Kingdoms (Specials)",
+    "title_original": "十二国記 外伝",
+    "genre": [
+      "Фэнтези"
+    ],
+    "year": 2013,
+    "status": "Завершен",
+    "studio": "Pierrot",
+    "episodes": 1,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Спецвыпуск к сериалу.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Kino's Journey (2017)",
+    "title_original": "キノの旅 -the Beautiful World- the Animated Series",
+    "genre": [
+      "Приключения",
+      "Философия"
+    ],
+    "year": 2017,
+    "status": "Завершен",
+    "studio": "Lerche",
+    "episodes": 12,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Новая адаптация странствий Кино.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
+  },
+  {
+    "title": "Texhnolyze (Special)",
+    "title_original": "テクノライズ Special",
+    "genre": [
+      "Психологический"
+    ],
+    "year": 2003,
+    "status": "Завершен",
+    "studio": "Madhouse",
+    "episodes": 1,
+    "duration": "24 мин.",
+    "age_rating": "PG-13",
+    "description": "Доп. выпуск.",
+    "characters": [],
+    "poster": "",
+    "trailers": []
   }
 ]
