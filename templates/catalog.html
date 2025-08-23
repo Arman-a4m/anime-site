@@ -208,7 +208,7 @@
                                      loading="lazy">
                                 <div class="poster-overlay">
                                     <div class="overlay-content">
-                                        <a href="{{ url_for('anime_page', title=anime_item.title) }}" 
+                                        <a href="{{ url_for('anime_page', title=anime_item.title|urlencode) }}" 
                                            class="btn btn-primary btn-small">
                                             <i class="fas fa-eye"></i>
                                             Подробнее
@@ -226,7 +226,7 @@
 
                         <div class="card-body">
                             <h3 class="anime-title">
-                                <a href="{{ url_for('anime_page', title=anime_item.title) }}">
+                                <a href="{{ url_for('anime_page', title=anime_item.title|urlencode) }}">
                                     {{ anime_item.title|e }}
                                 </a>
                             </h3>
@@ -277,7 +277,7 @@
                         </div>
 
                         <div class="card-footer">
-                            <a href="{{ url_for('anime_page', title=anime_item.title) }}" 
+                            <a href="{{ url_for('anime_page', title=anime_item.title|urlencode) }}" 
                                class="btn btn-outline btn-full">
                                 <i class="fas fa-info-circle"></i>
                                 Подробнее

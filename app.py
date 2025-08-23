@@ -90,6 +90,10 @@ class AnimeCatalog:
     
     def get_anime_by_title(self, title):
         """Получить аниме по названию"""
+        # Декодируем URL-encoded строку
+        import urllib.parse
+        title = urllib.parse.unquote(title)
+        
         for anime in self._anime_data:
             if (anime.get('title', '').lower() == title.lower() or
                 anime.get('title_english', '').lower() == title.lower() or
