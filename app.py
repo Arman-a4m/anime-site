@@ -92,7 +92,13 @@ class AnimeCatalog:
         """Получить аниме по названию"""
         # Декодируем URL-encoded строку
         import urllib.parse
-        title = urllib.parse.unquote(title)
+        try:
+            title = urllib.parse.unquote(title)
+        except:
+            pass
+        
+        # Также заменяем %20 на пробелы для совместимости
+        title = title.replace('%20', ' ')
         
         for anime in self._anime_data:
             if (anime.get('title', '').lower() == title.lower() or
@@ -186,9 +192,9 @@ def catalog_page():
         
         return render_template('catalog.html', 
                              anime=anime,
-                             genres=genres,
-                             years=years,
-                             statuses=statuses,
+        genres=genres,
+        years=years,
+        statuses=statuses,
                              studios=studios,
                              current_filters=current_filters)
     except Exception as e:

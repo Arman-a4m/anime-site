@@ -90,7 +90,7 @@
                 
                 <div class="anime-actions">
                     {% if anime.trailers %}
-                    <button class="btn btn-primary btn-large" onclick="showTrailer()">
+                    <button class="btn btn-trailer btn-large" onclick="showTrailer()">
                         <i class="fas fa-play"></i>
                         Смотреть трейлер
                     </button>
@@ -203,99 +203,98 @@
 <!-- Recommendations Section -->
 {% if recommendations %}
 <section class="recommendations-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">
-                <i class="fas fa-star"></i>
-                Рекомендации
-            </h2>
-            <p class="section-subtitle">
-                Если вам понравилось это аниме, попробуйте посмотреть эти
-            </p>
-        </div>
-        
-        <div class="recommendations-grid">
-            {% for rec in recommendations %}
-            <article class="recommendation-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
-                <div class="card-header">
-                    <div class="poster-container">
-                        <img src="{{ rec.poster }}" 
-                             alt="Постер {{ rec.title }}" 
-                             class="anime-poster"
-                             loading="lazy">
-                        <div class="poster-overlay">
-                            <div class="overlay-content">
-                                <a href="{{ url_for('anime_page', title=rec.title) }}" 
-                                   class="btn btn-primary btn-small">
-                                    <i class="fas fa-eye"></i>
-                                    Подробнее
-                                </a>
-                            </div>
+    <div class="section-header">
+        <h2 class="section-title">
+            <i class="fas fa-star"></i>
+            Рекомендации
+        </h2>
+        <p class="section-subtitle">
+            Если вам понравилось это аниме, попробуйте посмотреть эти
+        </p>
+    </div>
+    
+    <div class="recommendations-grid">
+        {% for rec in recommendations %}
+        <article class="recommendation-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+            <div class="card-header">
+                <div class="poster-container">
+                    <img src="{{ rec.poster }}" 
+                         alt="Постер {{ rec.title }}" 
+                         class="anime-poster"
+                         loading="lazy">
+                    <div class="poster-overlay">
+                        <div class="overlay-content">
+                            <a href="{{ url_for('anime_page', title=rec.title|replace(' ', '%20')) }}" 
+                               class="btn btn-primary btn-small">
+                                <i class="fas fa-eye"></i>
+                                Подробнее
+                            </a>
                         </div>
                     </div>
-                    {% if rec.rating %}
-                    <div class="rating-badge">
-                        <i class="fas fa-star"></i>
-                        <span>{{ "%.1f"|format(rec.rating) }}</span>
-                    </div>
-                    {% endif %}
                 </div>
-
-                <div class="card-body">
-                    <h3 class="anime-title">
-                        <a href="{{ url_for('anime_page', title=rec.title) }}">
-                            {{ rec.title }}
-                        </a>
-                    </h3>
-                    
-                    {% if rec.title_original %}
-                    <p class="anime-original">{{ rec.title_original }}</p>
-                    {% endif %}
-
-                    <div class="anime-meta">
-                        {% if rec.year %}
-                        <span class="meta-item">
-                            <i class="fas fa-calendar"></i>
-                            {{ rec.year }}
-                        </span>
-                        {% endif %}
-                        
-                        {% if rec.episodes %}
-                        <span class="meta-item">
-                            <i class="fas fa-play-circle"></i>
-                            {{ rec.episodes }} эп.
-                        </span>
-                        {% endif %}
-                        
-                        {% if rec.status %}
-                        <span class="meta-item status-{{ rec.status.lower() }}">
-                            <i class="fas fa-circle"></i>
-                            {{ rec.status }}
-                        </span>
-                        {% endif %}
-                    </div>
-
-                    {% if rec.genre %}
-                    <div class="anime-genres">
-                        {% for genre in rec.genre[:3] %}
-                        <span class="genre-tag">{{ genre }}</span>
-                        {% endfor %}
-                        {% if rec.genre|length > 3 %}
-                        <span class="genre-tag more">+{{ rec.genre|length - 3 }}</span>
-                        {% endif %}
-                    </div>
+                {% if rec.rating %}
+                <div class="rating-badge">
+                    <i class="fas fa-star"></i>
+                    <span>{{ "%.1f"|format(rec.rating) }}</span>
                 </div>
+                {% endif %}
+            </div>
 
-                <div class="card-footer">
-                    <a href="{{ url_for('anime_page', title=rec.title) }}" 
-                       class="btn btn-outline btn-full">
-                        <i class="fas fa-info-circle"></i>
-                        Подробнее
+            <div class="card-body">
+                <h3 class="anime-title">
+                    <a href="{{ url_for('anime_page', title=rec.title|replace(' ', '%20')) }}">
+                        {{ rec.title }}
                     </a>
+                </h3>
+                
+                {% if rec.title_original %}
+                <p class="anime-original">{{ rec.title_original }}</p>
+                {% endif %}
+
+                <div class="anime-meta">
+                    {% if rec.year %}
+                    <span class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        {{ rec.year }}
+                    </span>
+                    {% endif %}
+                    
+                    {% if rec.episodes %}
+                    <span class="meta-item">
+                        <i class="fas fa-play-circle"></i>
+                        {{ rec.episodes }} эп.
+                    </span>
+                    {% endif %}
+                    
+                    {% if rec.status %}
+                    <span class="meta-item status-{{ rec.status.lower() }}">
+                        <i class="fas fa-circle"></i>
+                        {{ rec.status }}
+                    </span>
+                    {% endif %}
                 </div>
-            </article>
-            {% endfor %}
-        </div>
+
+                {% if rec.genre %}
+                <div class="anime-genres">
+                    {% for genre in rec.genre[:3] %}
+                    <span class="genre-tag">{{ genre }}</span>
+                    {% endfor %}
+                    {% if rec.genre|length > 3 %}
+                    <span class="genre-tag more">+{{ rec.genre|length - 3 }}</span>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="card-footer">
+                <a href="{{ url_for('anime_page', title=rec.title|replace(' ', '%20')) }}" 
+                   class="btn btn-outline btn-full">
+                    <i class="fas fa-info-circle"></i>
+                    Подробнее
+                </a>
+            </div>
+        </article>
+        {% endfor %}
     </div>
 </section>
 {% endif %}
@@ -310,44 +309,177 @@
         </div>
         <div class="modal-content">
             <div class="video-container">
-                <iframe src="{{ anime.trailers[0] }}" 
+                <iframe id="trailerIframe"
+                        src="{{ anime.trailers[0] }}?autoplay=0&rel=0&modestbranding=1&showinfo=0&controls=1&enablejsapi=1&origin={{ request.url_root|replace('http://', '')|replace('https://', '')|replace('/', '') }}&wmode=transparent"
                         frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        loading="lazy">
                 </iframe>
+                <div id="trailerError" style="display: none; text-align: center; padding: 2rem;">
+                    <div style="margin-bottom: 1rem;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #f59e0b; margin-bottom: 1rem;"></i>
+                        <h4 style="margin: 0 0 0.5rem 0; color: #374151;">Трейлер временно недоступен</h4>
+                        <p style="margin: 0; color: #6b7280;">Видео недоступно для встраивания на сайте</p>
+                        <p style="margin: 0.5rem 0 0 0; color: #6b7280; font-size: 0.9rem;">Возможные причины: блокировка браузера, настройки безопасности</p>
+                    </div>
+                    <a href="{{ anime.trailers[0] }}" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i>
+                        Смотреть на YouTube
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 {% endif %}
+
 {% endblock %}
 
 {% block scripts %}
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    // Initialize AOS
+    // Initialize AOS with optimized settings
     AOS.init({
-        duration: 600,
+        duration: 400,
         easing: 'ease-out',
         once: true,
-        offset: 50
+        offset: 30,
+        disable: 'mobile'
     });
 
     // Trailer modal functions
     function showTrailer() {
-        document.getElementById('trailerModal').style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+        const modal = document.getElementById('trailerModal');
+        const iframe = document.getElementById('trailerIframe');
+        const errorDiv = document.getElementById('trailerError');
+        
+        if (modal && iframe) {
+            // Показываем модальное окно
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Скрываем сообщение об ошибке
+            if (errorDiv) {
+                errorDiv.style.display = 'none';
+            }
+            
+            // Создаем новый iframe для гарантированной загрузки
+            const newIframe = document.createElement('iframe');
+            newIframe.id = 'trailerIframe';
+            newIframe.src = iframe.src;
+            newIframe.frameborder = '0';
+            newIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            newIframe.allowfullscreen = true;
+            newIframe.loading = 'lazy';
+            
+            // Заменяем старый iframe новым
+            iframe.parentNode.replaceChild(newIframe, iframe);
+            
+            // Обновляем ссылку на новый iframe
+            const updatedIframe = document.getElementById('trailerIframe');
+            
+            // Добавляем обработчики для нового iframe
+            if (updatedIframe) {
+                updatedIframe.addEventListener('load', function() {
+                    if (errorDiv) {
+                        errorDiv.style.display = 'none';
+                    }
+                });
+                
+                updatedIframe.addEventListener('error', function() {
+                    if (errorDiv) {
+                        errorDiv.style.display = 'block';
+                    }
+                });
+                
+                // Проверяем загрузку через 3 секунды
+                setTimeout(() => {
+                    checkIframeLoad(updatedIframe);
+                }, 3000);
+            }
+        }
+    }
+
+    function checkIframeLoad(iframeElement) {
+        const iframe = iframeElement || document.getElementById('trailerIframe');
+        const errorDiv = document.getElementById('trailerError');
+        
+        if (iframe && errorDiv) {
+            try {
+                // Проверяем, загрузился ли iframe
+                if (iframe.contentWindow && iframe.contentWindow.location.href === 'about:blank') {
+                    errorDiv.style.display = 'block';
+                }
+            } catch (e) {
+                // Если есть ошибка CORS, показываем fallback
+                errorDiv.style.display = 'block';
+            }
+        }
     }
 
     function closeTrailer() {
-        document.getElementById('trailerModal').style.display = 'none';
-        document.body.style.overflow = 'auto';
+        const modal = document.getElementById('trailerModal');
+        const iframe = document.getElementById('trailerIframe');
+        
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            
+            // Останавливаем видео при закрытии
+            if (iframe) {
+                iframe.src = iframe.src;
+            }
+        }
     }
 
-    // Close modal on outside click
-    document.getElementById('trailerModal').addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeTrailer();
+    // Event listeners
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('trailerModal');
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeTrailer();
+                }
+            });
+        }
+        
+        // Добавляем обработчик ошибок для iframe
+        const iframe = document.getElementById('trailerIframe');
+        const errorDiv = document.getElementById('trailerError');
+        
+        if (iframe && errorDiv) {
+            iframe.addEventListener('load', function() {
+                errorDiv.style.display = 'none';
+                
+                // Дополнительная проверка через небольшую задержку
+                setTimeout(() => {
+                    try {
+                        if (iframe.contentWindow && iframe.contentWindow.location.href === 'about:blank') {
+                            errorDiv.style.display = 'block';
+                        }
+                    } catch (e) {
+                        // CORS ошибка - показываем fallback
+                        errorDiv.style.display = 'block';
+                    }
+                }, 1000);
+            });
+            
+            iframe.addEventListener('error', function() {
+                errorDiv.style.display = 'block';
+            });
+            
+            // Проверяем состояние iframe при инициализации
+            setTimeout(() => {
+                try {
+                    if (iframe.contentWindow && iframe.contentWindow.location.href === 'about:blank') {
+                        errorDiv.style.display = 'block';
+                    }
+                } catch (e) {
+                    // CORS ошибка - показываем fallback
+                    errorDiv.style.display = 'block';
+                }
+            }, 500);
         }
     });
 

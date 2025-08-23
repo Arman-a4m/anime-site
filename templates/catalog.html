@@ -208,7 +208,7 @@
                                      loading="lazy">
                                 <div class="poster-overlay">
                                     <div class="overlay-content">
-                                        <a href="{{ url_for('anime_page', title=anime_item.title|urlencode) }}" 
+                                        <a href="{{ url_for('anime_page', title=anime_item.title|replace(' ', '%20')) }}" 
                                            class="btn btn-primary btn-small">
                                             <i class="fas fa-eye"></i>
                                             Подробнее
@@ -226,7 +226,7 @@
 
                         <div class="card-body">
                             <h3 class="anime-title">
-                                <a href="{{ url_for('anime_page', title=anime_item.title|urlencode) }}">
+                                <a href="{{ url_for('anime_page', title=anime_item.title|replace(' ', '%20')) }}">
                                     {{ anime_item.title|e }}
                                 </a>
                             </h3>
@@ -277,7 +277,7 @@
                         </div>
 
                         <div class="card-footer">
-                            <a href="{{ url_for('anime_page', title=anime_item.title|urlencode) }}" 
+                            <a href="{{ url_for('anime_page', title=anime_item.title|replace(' ', '%20')) }}" 
                                class="btn btn-outline btn-full">
                                 <i class="fas fa-info-circle"></i>
                                 Подробнее
@@ -334,13 +334,46 @@
             });
         });
 
-        // Auto-submit form on select change
-        const filterSelects = document.querySelectorAll('.filter-select');
-        filterSelects.forEach(select => {
-            select.addEventListener('change', function() {
-                document.getElementById('filtersForm').submit();
-            });
+            // Auto-submit form on select change
+    const filterSelects = document.querySelectorAll('.filter-select');
+    filterSelects.forEach(select => {
+        select.addEventListener('change', function() {
+            document.getElementById('filtersForm').submit();
         });
+    });
+
+    // Sticky filters behavior
+    const filtersSection = document.querySelector('.filters-section');
+    let lastScrollY = window.pageYOffset;
+    let isFiltersVisible = true;
+
+    if (filtersSection) {
+        window.addEventListener('scroll', function() {
+            const currentScrollY = window.pageYOffset;
+            const scrollThreshold = 200; // Показывать фильтры после прокрутки 200px
+
+            // Показываем фильтры в начале страницы
+            if (currentScrollY < scrollThreshold) {
+                if (!isFiltersVisible) {
+                    filtersSection.classList.remove('hidden');
+                    isFiltersVisible = true;
+                }
+            } else {
+                // При прокрутке вниз - скрываем, при прокрутке вверх - показываем
+                if (currentScrollY > lastScrollY && isFiltersVisible) {
+                    // Прокрутка вниз
+                    filtersSection.classList.add('hidden');
+                    isFiltersVisible = false;
+                } else if (currentScrollY < lastScrollY && !isFiltersVisible) {
+                    // Прокрутка вверх
+                    filtersSection.classList.remove('hidden');
+                    isFiltersVisible = true;
+                }
+            }
+
+            lastScrollY = currentScrollY;
+        });
+    }
     });
 </script>
 {% endblock %}
