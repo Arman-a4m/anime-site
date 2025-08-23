@@ -1,43 +1,253 @@
 {% extends "base.html" %}
 
+{% block title %}Главная - {{ app_name }}{% endblock %}
+{% block description %}Откройте для себя лучшие аниме сериалы с подробной информацией, рейтингами и персонализированными рекомендациями{% endblock %}
+
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 
 {% block content %}
-<section class="recommendations container">
-    <h1>✨ Рекомендации недели</h1>
-
-    {% if anime_list %}
-        <div class="anime-grid">
-            {% for a in anime_list %}
-                <article class="anime-card" aria-label="{{ a.title|e }}">
-                    <!-- Постер -->
-                    <div class="poster">
-                        <img src="{{ a.poster|e }}" alt="Постер {{ a.title|e }}">
-                    </div>
-
-                    <div class="anime-info">
-                        <h2>{{ a.title|e }}</h2>
-
-                        <!-- Жанры -->
-                        <p class="genres"><b>Жанры:</b> {{ a.genre|join(', ') }}</p>
-
-                        <!-- Год -->
-                        {% if a.year %}
-                            <p class="year"><b>Год выхода:</b> {{ a.year }}</p>
-                        {% endif %}
-
-                        <!-- Кнопка -->
-                        <a href="{{ url_for('anime_page', title=a.title) }}" class="btn">Подробнее</a>
-                    </div>
-                </article>
-            {% endfor %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-background">
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Откройте мир <span class="text-gradient">аниме</span>
+            </h1>
+            <p class="hero-subtitle">
+                Исследуйте тысячи аниме сериалов, находите новые любимые истории и получайте персонализированные рекомендации
+            </p>
+            <div class="hero-actions">
+                <a href="{{ url_for('catalog_page') }}" class="btn btn-primary btn-large">
+                    <i class="fas fa-search"></i>
+                    Начать поиск
+                </a>
+                <a href="#featured" class="btn btn-secondary btn-large">
+                    <i class="fas fa-star"></i>
+                    Популярное
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">{{ anime_list|length }}+</span>
+                    <span class="stat-label">Аниме</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Жанров</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">8.5+</span>
+                    <span class="stat-label">Средний рейтинг</span>
+                </div>
+            </div>
         </div>
-    {% else %}
-        <p class="no-recommendations">😔 Пока нет рекомендаций.</p>
-    {% endif %}
+    </div>
 </section>
+
+<!-- Featured Section -->
+<section id="featured" class="featured-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="fas fa-star"></i>
+                Рекомендации недели
+            </h2>
+            <p class="section-subtitle">
+                Лучшие аниме, подобранные специально для вас
+            </p>
+        </div>
+
+        {% if anime_list %}
+            <div class="anime-grid">
+                {% for anime in anime_list %}
+                    <article class="anime-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                        <div class="card-header">
+                            <div class="poster-container">
+                                <img src="{{ anime.poster|e }}" 
+                                     alt="Постер {{ anime.title|e }}" 
+                                     class="anime-poster"
+                                     loading="lazy">
+                                <div class="poster-overlay">
+                                    <div class="overlay-content">
+                                        <a href="{{ url_for('anime_page', title=anime.title) }}" 
+                                           class="btn btn-primary btn-small">
+                                            <i class="fas fa-eye"></i>
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if anime.rating %}
+                                <div class="rating-badge">
+                                    <i class="fas fa-star"></i>
+                                    <span>{{ "%.1f"|format(anime.rating) }}</span>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="anime-title">
+                                <a href="{{ url_for('anime_page', title=anime.title) }}">
+                                    {{ anime.title|e }}
+                                </a>
+                            </h3>
+                            
+                            {% if anime.title_original %}
+                                <p class="anime-original">{{ anime.title_original|e }}</p>
+                            {% endif %}
+
+                            <div class="anime-meta">
+                                {% if anime.year %}
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        {{ anime.year }}
+                                    </span>
+                                {% endif %}
+                                
+                                {% if anime.episodes %}
+                                    <span class="meta-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        {{ anime.episodes }} эп.
+                                    </span>
+                                {% endif %}
+                                
+                                {% if anime.status %}
+                                    <span class="meta-item status-{{ anime.status.lower() }}">
+                                        <i class="fas fa-circle"></i>
+                                        {{ anime.status }}
+                                    </span>
+                                {% endif %}
+                            </div>
+
+                            {% if anime.genre %}
+                                <div class="anime-genres">
+                                    {% for genre in anime.genre[:3] %}
+                                        <span class="genre-tag">{{ genre|e }}</span>
+                                    {% endfor %}
+                                    {% if anime.genre|length > 3 %}
+                                        <span class="genre-tag more">+{{ anime.genre|length - 3 }}</span>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+
+                            {% if anime.description %}
+                                <p class="anime-description">
+                                    {{ anime.description[:100] }}{% if anime.description|length > 100 %}...{% endif %}
+                                </p>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="{{ url_for('anime_page', title=anime.title) }}" 
+                               class="btn btn-outline btn-full">
+                                <i class="fas fa-info-circle"></i>
+                                Подробнее
+                            </a>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+
+            <div class="section-footer">
+                <a href="{{ url_for('catalog_page') }}" class="btn btn-primary btn-large">
+                    <i class="fas fa-list"></i>
+                    Смотреть все аниме
+                </a>
+            </div>
+        {% else %}
+            <div class="empty-state">
+                <div class="empty-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Пока нет рекомендаций</h3>
+                <p>Попробуйте обновить страницу или перейти в каталог</p>
+                <a href="{{ url_for('catalog_page') }}" class="btn btn-primary">
+                    Перейти в каталог
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <p class="section-subtitle">
+                Все, что нужно для комфортного поиска и изучения аниме
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Умный поиск</h3>
+                <p>Находите аниме по названию, жанру, году выпуска и многим другим критериям</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Рекомендации</h3>
+                <p>Получайте персонализированные рекомендации на основе ваших предпочтений</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Адаптивный дизайн</h3>
+                <p>Удобно используйте сайт на любом устройстве - от телефона до компьютера</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Безопасность</h3>
+                <p>Все данные защищены и соответствуют современным стандартам безопасности</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2>Готовы начать?</h2>
+            <p>Присоединяйтесь к тысячам поклонников аниме и откройте для себя новые удивительные истории</p>
+            <div class="cta-actions">
+                <a href="{{ url_for('catalog_page') }}" class="btn btn-primary btn-large">
+                    <i class="fas fa-rocket"></i>
+                    Начать путешествие
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS (Animate On Scroll)
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+</script>
 {% endblock %}
 
 

@@ -3,36 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnia – Всё об аниме</title>
+    <meta name="description" content="{% block description %}Современный каталог аниме с подробной информацией, рейтингами и рекомендациями{% endblock %}">
+    <meta name="keywords" content="аниме, каталог, рейтинги, рекомендации, японская анимация">
+    <meta name="author" content="Anime Catalog">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:title" content="{% block og_title %}{{ app_name }} - Каталог аниме{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Откройте для себя лучшие аниме сериалы с подробной информацией и рейтингами{% endblock %}">
+    <meta property="og:image" content="{{ url_for('static', filename='images/og-image.jpg', _external=True) }}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.url }}">
+    <meta property="twitter:title" content="{% block twitter_title %}{{ app_name }} - Каталог аниме{% endblock %}">
+    <meta property="twitter:description" content="{% block twitter_description %}Откройте для себя лучшие аниме сериалы{% endblock %}">
+    <meta property="twitter:image" content="{{ url_for('static', filename='images/og-image.jpg', _external=True) }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    
+    <title>{% block title %}{{ app_name }} - Каталог аниме{% endblock %}</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     {% block styles %}{% endblock %}
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="{{ url_for('static', filename='css/base.css') }}" as="style">
 </head>
 <body>
-    <!-- Шапка -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="logo">
-                <h1>Arnia</h1>
-                <p>Всё об аниме</p>
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Загрузка...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="{{ url_for('index') }}" class="logo-link">
+                        <i class="fas fa-play-circle logo-icon"></i>
+                        <div class="logo-text">
+                            <h1 class="logo-title">{{ app_name }}</h1>
+                            <p class="logo-subtitle">Каталог аниме</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="navbar" id="navbar">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="{{ url_for('index') }}" class="nav-link {% if request.endpoint == 'index' %}active{% endif %}">
+                                <i class="fas fa-home"></i>
+                                <span>Главная</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('catalog_page') }}" class="nav-link {% if request.endpoint == 'catalog_page' %}active{% endif %}">
+                                <i class="fas fa-list"></i>
+                                <span>Каталог</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <nav class="navbar">
-                <a href="/" class="nav-link">Главная</a>
-                <a href="/catalog" class="nav-link">Каталог</a>
-            </nav>
         </div>
     </header>
 
-    <!-- Контент -->
-    <main class="site-content container">
+    <!-- Main content -->
+    <main class="site-content">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Футер -->
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <p>© 2025 Arnia | Все права защищены</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-play-circle"></i>
+                        <span>{{ app_name }}</span>
+                    </div>
+                    <p class="footer-description">
+                        Современный каталог аниме с подробной информацией, рейтингами и персонализированными рекомендациями.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('index') }}">Главная</a></li>
+                        <li><a href="{{ url_for('catalog_page') }}">Каталог</a></li>
+                        <li><a href="/api/anime">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Информация</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showAbout()">О проекте</a></li>
+                        <li><a href="#" onclick="showPrivacy()">Политика конфиденциальности</a></li>
+                        <li><a href="#" onclick="showTerms()">Условия использования</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Связаться</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 {{ app_name }}. Все права защищены.</p>
+                <p class="footer-version">Версия {{ app_version }}</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    {% block scripts %}{% endblock %}
+    
+    <!-- Analytics (опционально) -->
+    {% if config.DEBUG == False %}
+    <!-- Здесь можно добавить Google Analytics или другие аналитические сервисы -->
+    {% endif %}
 </body>
 </html>
 

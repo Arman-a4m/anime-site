@@ -1,64 +1,346 @@
 {% extends "base.html" %}
 
+{% block title %}Каталог аниме - {{ app_name }}{% endblock %}
+{% block description %}Исследуйте полный каталог аниме с мощными фильтрами поиска по жанрам, годам, студиям и статусам{% endblock %}
+
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/catalog.css') }}">
 {% endblock %}
 
 {% block content %}
-<section class="catalog">
-    <h1>📚 Каталог аниме</h1>
-
-    <!-- Форма фильтров -->
-    <form method="get" class="filters">
-        <input type="text" name="q" placeholder="🔍 Поиск аниме..." value="{{ request.args.get('q', '') }}">
-
-        <select name="genre">
-            <option value="">Все жанры</option>
-            {% for g in genres %}
-            <option value="{{ g }}" {% if request.args.get('genre') == g %}selected{% endif %}>{{ g }}</option>
-            {% endfor %}
-        </select>
-
-        <select name="year">
-            <option value="">Все годы</option>
-            {% for y in years %}
-            <option value="{{ y }}" {% if request.args.get('year') == y %}selected{% endif %}>{{ y }}</option>
-            {% endfor %}
-        </select>
-
-        <select name="status">
-            <option value="">Все статусы</option>
-            {% for s in statuses %}
-            <option value="{{ s }}" {% if request.args.get('status') == s %}selected{% endif %}>{{ s }}</option>
-            {% endfor %}
-        </select>
-
-        <select name="studio">
-            <option value="">Все студии</option>
-            {% for st in studios %}
-            <option value="{{ st }}" {% if request.args.get('studio') == st %}selected{% endif %}>{{ st }}</option>
-            {% endfor %}
-        </select>
-
-        <button type="submit" class="btn">Фильтровать</button>
-    </form>
-
-    <!-- Сетка аниме -->
-    {% if anime %}
-        <div class="catalog-grid">
-            {% for a in anime %}
-                <article class="catalog-item">
-                    <div class="poster">
-                        <img src="{{ a.poster|e }}" alt="{{ a.title|e }}">
-                    </div>
-                    <h2>{{ a.title|e }}</h2>
-                    <p class="genres"><b>Жанры:</b> {{ a.genre|join(', ') }}</p>
-                    <a href="{{ url_for('anime_page', title=a.title) }}" class="btn">Подробнее</a>
-                </article>
-            {% endfor %}
+<!-- Catalog Header -->
+<section class="catalog-header">
+    <div class="container">
+        <div class="catalog-intro">
+            <h1 class="catalog-title">
+                <i class="fas fa-list"></i>
+                Каталог аниме
+            </h1>
+            <p class="catalog-subtitle">
+                Исследуйте нашу коллекцию аниме с мощными фильтрами поиска
+            </p>
         </div>
-    {% else %}
-        <p class="empty">😔 Ничего не найдено.</p>
-    {% endif %}
+    </div>
 </section>
+
+<!-- Filters Section -->
+<section class="filters-section">
+    <div class="container">
+        <form method="get" class="filters-form" id="filtersForm">
+            <div class="filters-grid">
+                <!-- Search Input -->
+                <div class="filter-group">
+                    <label for="search" class="filter-label">
+                        <i class="fas fa-search"></i>
+                        Поиск
+                    </label>
+                    <input type="text" 
+                           id="search" 
+                           name="q" 
+                           placeholder="Название аниме..." 
+                           value="{{ current_filters.query }}"
+                           class="filter-input">
+                </div>
+
+                <!-- Genre Filter -->
+                <div class="filter-group">
+                    <label for="genre" class="filter-label">
+                        <i class="fas fa-tags"></i>
+                        Жанр
+                    </label>
+                    <select id="genre" name="genre" class="filter-select">
+                        <option value="">Все жанры</option>
+                        {% for genre in genres %}
+                        <option value="{{ genre }}" {% if current_filters.genre == genre %}selected{% endif %}>
+                            {{ genre }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Year Filter -->
+                <div class="filter-group">
+                    <label for="year" class="filter-label">
+                        <i class="fas fa-calendar"></i>
+                        Год
+                    </label>
+                    <select id="year" name="year" class="filter-select">
+                        <option value="">Все годы</option>
+                        {% for year in years %}
+                        <option value="{{ year }}" {% if current_filters.year == year %}selected{% endif %}>
+                            {{ year }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Status Filter -->
+                <div class="filter-group">
+                    <label for="status" class="filter-label">
+                        <i class="fas fa-circle"></i>
+                        Статус
+                    </label>
+                    <select id="status" name="status" class="filter-select">
+                        <option value="">Все статусы</option>
+                        {% for status in statuses %}
+                        <option value="{{ status }}" {% if current_filters.status == status %}selected{% endif %}>
+                            {{ status }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Studio Filter -->
+                <div class="filter-group">
+                    <label for="studio" class="filter-label">
+                        <i class="fas fa-building"></i>
+                        Студия
+                    </label>
+                    <select id="studio" name="studio" class="filter-select">
+                        <option value="">Все студии</option>
+                        {% for studio in studios %}
+                        <option value="{{ studio }}" {% if current_filters.studio == studio %}selected{% endif %}>
+                            {{ studio }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Filter Actions -->
+                <div class="filter-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-filter"></i>
+                        Применить фильтры
+                    </button>
+                    <a href="{{ url_for('catalog_page') }}" class="btn btn-secondary">
+                        <i class="fas fa-times"></i>
+                        Сбросить
+                    </a>
+                </div>
+            </div>
+        </form>
+
+        <!-- Active Filters -->
+        {% if current_filters.query or current_filters.genre or current_filters.year or current_filters.status or current_filters.studio %}
+        <div class="active-filters">
+            <span class="active-filters-label">Активные фильтры:</span>
+            {% if current_filters.query %}
+            <span class="filter-tag">
+                Поиск: "{{ current_filters.query }}"
+                <a href="{{ url_for('catalog_page', genre=current_filters.genre, year=current_filters.year, status=current_filters.status, studio=current_filters.studio) }}" class="remove-filter">×</a>
+            </span>
+            {% endif %}
+            {% if current_filters.genre %}
+            <span class="filter-tag">
+                Жанр: {{ current_filters.genre }}
+                <a href="{{ url_for('catalog_page', q=current_filters.query, year=current_filters.year, status=current_filters.status, studio=current_filters.studio) }}" class="remove-filter">×</a>
+            </span>
+            {% endif %}
+            {% if current_filters.year %}
+            <span class="filter-tag">
+                Год: {{ current_filters.year }}
+                <a href="{{ url_for('catalog_page', q=current_filters.query, genre=current_filters.genre, status=current_filters.status, studio=current_filters.studio) }}" class="remove-filter">×</a>
+            </span>
+            {% endif %}
+            {% if current_filters.status %}
+            <span class="filter-tag">
+                Статус: {{ current_filters.status }}
+                <a href="{{ url_for('catalog_page', q=current_filters.query, genre=current_filters.genre, year=current_filters.year, studio=current_filters.studio) }}" class="remove-filter">×</a>
+            </span>
+            {% endif %}
+            {% if current_filters.studio %}
+            <span class="filter-tag">
+                Студия: {{ current_filters.studio }}
+                <a href="{{ url_for('catalog_page', q=current_filters.query, genre=current_filters.genre, year=current_filters.year, status=current_filters.status) }}" class="remove-filter">×</a>
+            </span>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Results Section -->
+<section class="results-section">
+    <div class="container">
+        <!-- Results Header -->
+        <div class="results-header">
+            <div class="results-info">
+                <h2 class="results-title">
+                    Результаты поиска
+                    {% if anime %}
+                    <span class="results-count">({{ anime|length }} {{ 'аниме' if anime|length == 1 else 'аниме' if anime|length < 5 else 'аниме' }})</span>
+                    {% endif %}
+                </h2>
+            </div>
+            
+            <div class="results-controls">
+                <div class="view-toggle">
+                    <button type="button" class="view-btn active" data-view="grid" aria-label="Вид сеткой">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button type="button" class="view-btn" data-view="list" aria-label="Вид списком">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+                
+                <div class="sort-controls">
+                    <label for="sort" class="sort-label">Сортировка:</label>
+                    <select id="sort" class="sort-select">
+                        <option value="title">По названию</option>
+                        <option value="year">По году</option>
+                        <option value="rating">По рейтингу</option>
+                        <option value="episodes">По количеству эпизодов</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anime Grid -->
+        {% if anime %}
+            <div class="anime-grid" id="animeGrid">
+                {% for anime_item in anime %}
+                    <article class="anime-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 50 }}">
+                        <div class="card-header">
+                            <div class="poster-container">
+                                <img src="{{ anime_item.poster|e }}" 
+                                     alt="Постер {{ anime_item.title|e }}" 
+                                     class="anime-poster"
+                                     loading="lazy">
+                                <div class="poster-overlay">
+                                    <div class="overlay-content">
+                                        <a href="{{ url_for('anime_page', title=anime_item.title) }}" 
+                                           class="btn btn-primary btn-small">
+                                            <i class="fas fa-eye"></i>
+                                            Подробнее
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if anime_item.rating %}
+                                <div class="rating-badge">
+                                    <i class="fas fa-star"></i>
+                                    <span>{{ "%.1f"|format(anime_item.rating) }}</span>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-body">
+                            <h3 class="anime-title">
+                                <a href="{{ url_for('anime_page', title=anime_item.title) }}">
+                                    {{ anime_item.title|e }}
+                                </a>
+                            </h3>
+                            
+                            {% if anime_item.title_original %}
+                                <p class="anime-original">{{ anime_item.title_original|e }}</p>
+                            {% endif %}
+
+                            <div class="anime-meta">
+                                {% if anime_item.year %}
+                                    <span class="meta-item">
+                                        <i class="fas fa-calendar"></i>
+                                        {{ anime_item.year }}
+                                    </span>
+                                {% endif %}
+                                
+                                {% if anime_item.episodes %}
+                                    <span class="meta-item">
+                                        <i class="fas fa-play-circle"></i>
+                                        {{ anime_item.episodes }} эп.
+                                    </span>
+                                {% endif %}
+                                
+                                {% if anime_item.status %}
+                                    <span class="meta-item status-{{ anime_item.status.lower() }}">
+                                        <i class="fas fa-circle"></i>
+                                        {{ anime_item.status }}
+                                    </span>
+                                {% endif %}
+                            </div>
+
+                            {% if anime_item.genre %}
+                                <div class="anime-genres">
+                                    {% for genre in anime_item.genre[:3] %}
+                                        <span class="genre-tag">{{ genre|e }}</span>
+                                    {% endfor %}
+                                    {% if anime_item.genre|length > 3 %}
+                                        <span class="genre-tag more">+{{ anime_item.genre|length - 3 }}</span>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+
+                            {% if anime_item.description %}
+                                <p class="anime-description">
+                                    {{ anime_item.description[:120] }}{% if anime_item.description|length > 120 %}...{% endif %}
+                                </p>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="{{ url_for('anime_page', title=anime_item.title) }}" 
+                               class="btn btn-outline btn-full">
+                                <i class="fas fa-info-circle"></i>
+                                Подробнее
+                            </a>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state">
+                <div class="empty-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Ничего не найдено</h3>
+                <p>Попробуйте изменить параметры поиска или фильтры</p>
+                <div class="empty-actions">
+                    <a href="{{ url_for('catalog_page') }}" class="btn btn-primary">
+                        <i class="fas fa-list"></i>
+                        Показать все аниме
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 600,
+        easing: 'ease-out',
+        once: true,
+        offset: 50
+    });
+
+    // View toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const viewBtns = document.querySelectorAll('.view-btn');
+        const animeGrid = document.getElementById('animeGrid');
+        
+        viewBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const view = this.dataset.view;
+                
+                // Update active button
+                viewBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update grid class
+                animeGrid.className = `anime-grid view-${view}`;
+            });
+        });
+
+        // Auto-submit form on select change
+        const filterSelects = document.querySelectorAll('.filter-select');
+        filterSelects.forEach(select => {
+            select.addEventListener('change', function() {
+                document.getElementById('filtersForm').submit();
+            });
+        });
+    });
+</script>
 {% endblock %}
