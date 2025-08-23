@@ -390,6 +390,52 @@ function showTerms() {
     showModal(content, 'Условия использования');
 }
 
+/**
+ * Trailer Functions
+ * Работа с трейлерами YouTube
+ */
+function showTrailer() {
+    const modal = document.getElementById("trailerModal");
+    const iframe = document.getElementById("trailerIframe");
+    const errorDiv = document.getElementById("trailerError");
+
+    if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+
+    if (iframe && errorDiv) {
+        setTimeout(() => {
+            try {
+                if (!iframe.contentDocument) {
+                    iframe.style.display = "none";
+                    errorDiv.style.display = "block";
+                }
+            } catch (e) {
+                iframe.style.display = "none";
+                errorDiv.style.display = "block";
+            }
+        }, 2000);
+    }
+}
+
+function closeTrailer() {
+    const modal = document.getElementById("trailerModal");
+    const iframe = document.getElementById("trailerIframe");
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+    if (iframe) {
+        iframe.src = iframe.src;
+    }
+}
+
+// Закрытие трейлера по ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeTrailer();
+});
+
 // Export functions for global use
 window.AnimeCatalog = {
     showNotification,
@@ -397,5 +443,7 @@ window.AnimeCatalog = {
     closeModal,
     showAbout,
     showPrivacy,
-    showTerms
-}; 
+    showTerms,
+    showTrailer,
+    closeTrailer
+};

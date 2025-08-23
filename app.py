@@ -31,14 +31,27 @@ class AnimeCatalog:
         self._load_data()
     
     def _load_data(self):
-        """Загрузка данных аниме из JSON файла"""
         try:
             with open(self.data_file, 'r', encoding='utf-8') as file:
                 self._anime_data = json.load(file)
+
+            # фикс трейлеров
+            for anime in self._anime_data:
+                if "trailers" in anime:
+                    fixed_trailers = []
+                    for url in anime["trailers"]:
+                        if "watch?v=" in url:
+                            video_id = url.split("watch?v=")[-1].split("&")[0]
+                            fixed_trailers.append(f"https://www.youtube.com/embed/{video_id}")
+                        else:
+                            fixed_trailers.append(url)
+                    anime["trailers"] = fixed_trailers
+
             logger.info(f"Загружено {len(self._anime_data)} аниме из файла")
         except Exception as e:
             logger.error(f"Ошибка загрузки данных: {e}")
             self._anime_data = []
+
     
     def get_all_anime(self):
         """Получить все аниме"""
