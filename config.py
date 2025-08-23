@@ -5,7 +5,6 @@
 """
 
 import os
-from typing import Dict, Any
 
 class Config:
     """Базовая конфигурация"""
@@ -26,12 +25,7 @@ class Config:
     # Пути к файлам
     ANIME_DATA_FILE = os.environ.get('ANIME_DATA_FILE', 'templates/anime.json')
     
-    # Настройки кэширования
-    CACHE_TYPE = os.environ.get('CACHE_TYPE', 'simple')
-    CACHE_DEFAULT_TIMEOUT = 300
-    
-    # Настройки API
-    API_RATE_LIMIT = os.environ.get('API_RATE_LIMIT', '100 per minute')
+
     
     @staticmethod
     def init_app(app):
@@ -73,10 +67,6 @@ class ProductionConfig(Config):
     
     # Настройки логирования
     LOG_LEVEL = 'WARNING'
-    
-    # Настройки кэширования
-    CACHE_TYPE = 'redis'
-    CACHE_REDIS_URL = os.environ.get('REDIS_URL')
 
 class StagingConfig(Config):
     """Конфигурация для staging"""

@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeaderScroll();
     initSmoothScrolling();
     initAccessibility();
-    
-    console.log('🎌 Anime Catalog loaded successfully!');
 });
 
 /**
@@ -233,33 +231,6 @@ function initAccessibility() {
  * Utility Functions
  * Утилитарные функции
  */
-
-// Debounce function for performance
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Throttle function for scroll events
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
-}
 
 // Show notification
 function showNotification(message, type = 'info', duration = 3000) {

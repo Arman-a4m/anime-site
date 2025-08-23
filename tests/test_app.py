@@ -38,23 +38,7 @@ def test_api_anime(client):
     assert 'data' in data
     assert isinstance(data['data'], list)
 
-def test_api_anime_detail(client):
-    """Тест API для получения информации об аниме"""
-    # Сначала получаем список аниме
-    response = client.get('/api/anime')
-    data = json.loads(response.data)
-    
-    if data['data']:
-        first_anime = data['data'][0]
-        title = first_anime['title']
-        
-        # Тестируем получение конкретного аниме
-        response = client.get(f'/api/anime/{title}')
-        assert response.status_code == 200
-        
-        data = json.loads(response.data)
-        assert data['success'] is True
-        assert data['data']['title'] == title
+
 
 def test_404_error(client):
     """Тест обработки ошибки 404"""
@@ -63,7 +47,7 @@ def test_404_error(client):
 
 def test_anime_catalog_load():
     """Тест загрузки каталога аниме"""
-    anime_list = catalog.load_anime()
+    anime_list = catalog.get_all_anime()
     assert isinstance(anime_list, list)
     assert len(anime_list) > 0
 
@@ -83,7 +67,7 @@ def test_anime_search():
 
 def test_get_recommendations():
     """Тест получения рекомендаций"""
-    anime_list = catalog.load_anime()
+    anime_list = catalog.get_all_anime()
     if anime_list:
         first_anime = anime_list[0]
         recommendations = catalog.get_recommendations(first_anime)

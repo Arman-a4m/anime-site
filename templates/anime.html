@@ -1,61 +1,363 @@
 {% extends "base.html" %}
 
+{% block title %}{{ anime.title }} - {{ app_name }}{% endblock %}
+{% block description %}{{ anime.description[:160] }}{% endblock %}
+
 {% block styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/anime.css') }}">
 {% endblock %}
 
 {% block content %}
-<div class="anime-page">
-    <div class="anime-info">
-        <div class="poster">
-            <img src="{{ anime.poster|e }}" alt="{{ anime.title|e }}">
-        </div>
-        <div class="details">
-            <h1>{{ anime.title|e }}</h1>
-            <p><b>Оригинальное название:</b> {{ anime.title_original|e }}</p>
-            <p><b>Описание:</b> {{ anime.description|e }}</p>
-            <p><b>Жанры:</b> {{ anime.genre|join(', ') }}</p>
-            <p><b>Год выпуска:</b> {{ anime.year }}</p>
-            <p><b>Статус:</b> {{ anime.status|e }}</p>
-            <p><b>Студия:</b> {{ anime.studio|e }}</p>
-            <p><b>Количество серий:</b> {{ anime.episodes }}</p>
-            <p><b>Длительность серии:</b> {{ anime.duration|e }}</p>
-            <p><b>Возрастной рейтинг:</b> {{ anime.age_rating|e }}</p>
-            <p><b>Персонажи:</b> {{ anime.characters|join(', ') }}</p>
-        </div>
+<!-- Anime Hero Section -->
+<section class="anime-hero">
+    <div class="hero-background" style="background-image: url('{{ anime.poster }}');">
+        <div class="hero-overlay"></div>
     </div>
-
-    <hr>
-
-    <h2>🎬 Трейлеры</h2>
-    <div class="trailers">
-        {% for ep in anime.trailers %}
-        <div class="trailer-card">
-            <p>Трейлер (эпизод {{ ep.ep }})</p>
-            <iframe src="{{ ep.url|e }}" frameborder="0" allowfullscreen
-                    referrerpolicy="no-referrer" loading="lazy"></iframe>
-        </div>
-        {% endfor %}
-    </div>
-
-    <hr>
-
-    <h2>🔗 Похожие аниме</h2>
-    {% if recommendations %}
-        <div class="recommendations">
-            {% for a in recommendations %}
-            <div class="rec-item">
-                <img src="{{ a.poster|e }}" alt="{{ a.title|e }}">
-                <h3>{{ a.title|e }}</h3>
-                <p><b>Жанры:</b> {{ a.genre|join(', ') }}</p>
-                <a href="{{ url_for('anime_page', title=a.title) }}" class="btn">Подробнее</a>
+    <div class="container">
+        <div class="anime-hero-content">
+            <div class="anime-poster-large">
+                <img src="{{ anime.poster }}" alt="{{ anime.title }}" class="poster-image">
+                {% if anime.rating %}
+                <div class="rating-badge-large">
+                    <i class="fas fa-star"></i>
+                    <span>{{ "%.1f"|format(anime.rating) }}</span>
+                </div>
+                {% endif %}
             </div>
+            
+            <div class="anime-info">
+                <h1 class="anime-title">{{ anime.title }}</h1>
+                
+                {% if anime.title_original %}
+                <p class="anime-original-title">{{ anime.title_original }}</p>
+                {% endif %}
+                
+                {% if anime.title_english and anime.title_english != anime.title %}
+                <p class="anime-english-title">{{ anime.title_english }}</p>
+                {% endif %}
+                
+                <div class="anime-meta-grid">
+                    {% if anime.year %}
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>{{ anime.year }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.episodes %}
+                    <div class="meta-item">
+                        <i class="fas fa-play-circle"></i>
+                        <span>{{ anime.episodes }} эпизодов</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.duration %}
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>{{ anime.duration }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.status %}
+                    <div class="meta-item status-{{ anime.status.lower() }}">
+                        <i class="fas fa-circle"></i>
+                        <span>{{ anime.status }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.studio %}
+                    <div class="meta-item">
+                        <i class="fas fa-building"></i>
+                        <span>{{ anime.studio }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.source %}
+                    <div class="meta-item">
+                        <i class="fas fa-book"></i>
+                        <span>{{ anime.source }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                {% if anime.genre %}
+                <div class="anime-genres">
+                    {% for genre in anime.genre %}
+                    <span class="genre-tag">{{ genre }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
+                <div class="anime-actions">
+                    {% if anime.trailers %}
+                    <button class="btn btn-primary btn-large" onclick="showTrailer()">
+                        <i class="fas fa-play"></i>
+                        Смотреть трейлер
+                    </button>
+                    {% endif %}
+                    
+                    <a href="{{ url_for('catalog_page') }}" class="btn btn-secondary btn-large">
+                        <i class="fas fa-list"></i>
+                        Все аниме
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Anime Details Section -->
+<section class="anime-details">
+    <div class="container">
+        <div class="details-grid">
+            <!-- Description -->
+            <div class="detail-section">
+                <h2 class="section-title">
+                    <i class="fas fa-info-circle"></i>
+                    Описание
+                </h2>
+                <div class="description-content">
+                    <p>{{ anime.description }}</p>
+                </div>
+            </div>
+            
+            <!-- Characters -->
+            {% if anime.characters %}
+            <div class="detail-section">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    Персонажи
+                </h2>
+                <div class="characters-grid">
+                    {% for character in anime.characters %}
+                    <div class="character-item">
+                        <i class="fas fa-user"></i>
+                        <span>{{ character }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <!-- Additional Info -->
+            <div class="detail-section">
+                <h2 class="section-title">
+                    <i class="fas fa-cog"></i>
+                    Дополнительная информация
+                </h2>
+                <div class="info-grid">
+                    {% if anime.aired %}
+                    <div class="info-item">
+                        <strong>Период показа:</strong>
+                        <span>{{ anime.aired }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.broadcast %}
+                    <div class="info-item">
+                        <strong>Время показа:</strong>
+                        <span>{{ anime.broadcast }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.age_rating %}
+                    <div class="info-item">
+                        <strong>Возрастной рейтинг:</strong>
+                        <span>{{ anime.age_rating }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.director %}
+                    <div class="info-item">
+                        <strong>Режиссер:</strong>
+                        <span>{{ anime.director }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.music %}
+                    <div class="info-item">
+                        <strong>Музыка:</strong>
+                        <span>{{ anime.music|join(', ') }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.licensors %}
+                    <div class="info-item">
+                        <strong>Лицензиары:</strong>
+                        <span>{{ anime.licensors|join(', ') }}</span>
+                    </div>
+                    {% endif %}
+                    
+                    {% if anime.producers %}
+                    <div class="info-item">
+                        <strong>Продюсеры:</strong>
+                        <span>{{ anime.producers|join(', ') }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recommendations Section -->
+{% if recommendations %}
+<section class="recommendations-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">
+                <i class="fas fa-star"></i>
+                Рекомендации
+            </h2>
+            <p class="section-subtitle">
+                Если вам понравилось это аниме, попробуйте посмотреть эти
+            </p>
+        </div>
+        
+        <div class="recommendations-grid">
+            {% for rec in recommendations %}
+            <article class="recommendation-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="card-header">
+                    <div class="poster-container">
+                        <img src="{{ rec.poster }}" 
+                             alt="Постер {{ rec.title }}" 
+                             class="anime-poster"
+                             loading="lazy">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <a href="{{ url_for('anime_page', title=rec.title) }}" 
+                                   class="btn btn-primary btn-small">
+                                    <i class="fas fa-eye"></i>
+                                    Подробнее
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% if rec.rating %}
+                    <div class="rating-badge">
+                        <i class="fas fa-star"></i>
+                        <span>{{ "%.1f"|format(rec.rating) }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <div class="card-body">
+                    <h3 class="anime-title">
+                        <a href="{{ url_for('anime_page', title=rec.title) }}">
+                            {{ rec.title }}
+                        </a>
+                    </h3>
+                    
+                    {% if rec.title_original %}
+                    <p class="anime-original">{{ rec.title_original }}</p>
+                    {% endif %}
+
+                    <div class="anime-meta">
+                        {% if rec.year %}
+                        <span class="meta-item">
+                            <i class="fas fa-calendar"></i>
+                            {{ rec.year }}
+                        </span>
+                        {% endif %}
+                        
+                        {% if rec.episodes %}
+                        <span class="meta-item">
+                            <i class="fas fa-play-circle"></i>
+                            {{ rec.episodes }} эп.
+                        </span>
+                        {% endif %}
+                        
+                        {% if rec.status %}
+                        <span class="meta-item status-{{ rec.status.lower() }}">
+                            <i class="fas fa-circle"></i>
+                            {{ rec.status }}
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    {% if rec.genre %}
+                    <div class="anime-genres">
+                        {% for genre in rec.genre[:3] %}
+                        <span class="genre-tag">{{ genre }}</span>
+                        {% endfor %}
+                        {% if rec.genre|length > 3 %}
+                        <span class="genre-tag more">+{{ rec.genre|length - 3 }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <a href="{{ url_for('anime_page', title=rec.title) }}" 
+                       class="btn btn-outline btn-full">
+                        <i class="fas fa-info-circle"></i>
+                        Подробнее
+                    </a>
+                </div>
+            </article>
             {% endfor %}
         </div>
-    {% else %}
-        <p>😔 Похожих аниме пока нет.</p>
-    {% endif %}
+    </div>
+</section>
+{% endif %}
+
+<!-- Trailer Modal -->
+{% if anime.trailers %}
+<div id="trailerModal" class="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Трейлер: {{ anime.title }}</h3>
+            <button class="modal-close" onclick="closeTrailer()">&times;</button>
+        </div>
+        <div class="modal-content">
+            <div class="video-container">
+                <iframe src="{{ anime.trailers[0] }}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
 </div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 600,
+        easing: 'ease-out',
+        once: true,
+        offset: 50
+    });
+
+    // Trailer modal functions
+    function showTrailer() {
+        document.getElementById('trailerModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeTrailer() {
+        document.getElementById('trailerModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close modal on outside click
+    document.getElementById('trailerModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeTrailer();
+        }
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeTrailer();
+        }
+    });
+</script>
 {% endblock %}
 
 
